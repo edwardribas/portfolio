@@ -7,7 +7,7 @@ const [burger, nav, back, body] = [
     document.body
 ]
 
-const change = () => [nav, back].forEach(e=>e.classList.toggle("active"));
+const change = () => [nav, back, body].forEach(e=>e.classList.toggle("active"));
 [burger, back].forEach(e=>e.onclick = change);
 
 // Theme Toggler

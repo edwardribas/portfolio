@@ -328,7 +328,6 @@ footer{
     transition: color .3s, background-color .3s;
 }
 #repositories i{
-    margin-top: 2px;
     transition: transform .3s ease;
 }
 #repositories a:hover i{
