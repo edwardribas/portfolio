@@ -99,7 +99,7 @@ body{
 
     --project-title: rgb(234, 234, 234);
     --project-text:rgb(234, 234, 234);
-    --project-bg: rgb(20, 19, 19);
+    --project-bg: rgb(29, 27, 27);
 
     --footer-bg: rgb(27, 25, 25);
     --email-bg: linear-gradient(to right, rgb(27, 25, 25), rgb(27, 27, 27));
@@ -474,6 +474,9 @@ footer{
     nav.active > ul{
         height: 125px;
         visibility: visible;
+    }
+    body.active{
+        overflow-y: hidden;
     }
     #back{
         position: fixed;

@@ -1,49 +1,46 @@
-// responsive menu
-const burger = document.querySelector(".burger");
-const nav = document.querySelector("nav");
-const back = document.querySelector("#back");
-const html = document.querySelector("html")
-burger.onclick = () => {
-    nav.classList.toggle("active");
-    back.classList.toggle("active");
-};
-back.onclick = () => {
-    if(nav.classList.contains("active")){
-        nav.classList.remove("active");
-        back.classList.remove("active");
-    }
-}
+// Website Menu
 
-// dark mode toggler
+const [burger, nav, back, body] = [
+    document.querySelector('.burger'),
+    document.querySelector('nav'),
+    document.querySelector('#back'),
+    document.body
+]
 
-const togBtn = document.querySelector("#nav-btn ul");
-const moon = document.querySelector("#moon");
-const sun = document.querySelector("#sun");
+const change = () => [nav, back].forEach(e=>e.classList.toggle("active"));
+[burger, back].forEach(e=>e.onclick = change);
 
+// Theme Toggler
+
+const [toggler, moon, sun] = [
+    document.querySelector("#nav-btn ul"),
+    document.querySelector("#moon"),
+    document.querySelector("#sun")
+]
+
+const changeToLight = () => {sun.style.display = "none", moon.style.display = "block"};
+const changeToDark = () => {sun.style.display = "block", moon.style.display = "none"};
+
+// Keep theme setting in local storage
 if(localStorage.getItem("theme") == null){
     localStorage.setItem("theme", "light");
 }
-var localData = localStorage.getItem("theme")
-
-if(localData == "light"){
+if(localStorage.getItem("theme") == "light"){
     document.body.classList.remove("dark")
-    sun.style.display = "none";
-    moon.style.display = "block"
+    changeToLight();
 }else{
     document.body.classList.add("dark")
-    sun.style.display = "block";
-    moon.style.display = "none"
+    changeToDark();
 }
 
-togBtn.onclick = () => {
-    document.body.classList.toggle("dark");
-    if(document.body.classList.contains("dark")){
+// Alternate the theme
+toggler.onclick = () => {
+    body.classList.toggle("dark");
+    if(body.classList.contains("dark")){
         localStorage.setItem("theme", "dark")
-        sun.style.display = "block";
-        moon.style.display = "none"
+        changeToDark();
     }else{
         localStorage.setItem("theme", "light")
-        sun.style.display = "none";
-        moon.style.display = "block"
+        changeToLight();
     }
 }
