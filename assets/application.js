@@ -7,8 +7,24 @@ const [burger, nav, back, body] = [
     document.body
 ]
 
-const change = () => [nav, back, body].forEach(e=>e.classList.toggle("active"));
+// Nav, back, body toggler
+const change = () => {
+    [nav, back].forEach(e=>e.classList.toggle("active"));
+};
+
+
+// Calls change function when clicked.
 [burger, back].forEach(e=>e.onclick = change);
+
+// Exit menu with ESC key
+document.onkeydown = e => {
+    if(e.code === "Escape"){
+        if(nav.classList.contains("active")){
+            change();
+        }
+    }
+}
+
 
 // Theme Toggler
 

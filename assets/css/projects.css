@@ -20,13 +20,12 @@ img{
     align-items: flex-start;
 }
 .project{
-    border: 1px solid var(--header-border);
     max-width: 350px;
     background-color: var(--project-bg);
     border-radius: 16px;
     box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.14);
     overflow: hidden;
-    transition: box-shadow .5s, transform .5s ease, background-color .3s ease;
+    transition: box-shadow .5s, background-color .3s ease;
 }
 .project:hover{
     box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.204);

@@ -12,6 +12,9 @@
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
+html,body{
+    height: 100%;
+}
 html{
     font: 16px 'Montserrat', sans-serif;
     scroll-behavior: smooth;
@@ -99,7 +102,7 @@ body{
 
     --project-title: rgb(234, 234, 234);
     --project-text:rgb(234, 234, 234);
-    --project-bg: rgb(29, 27, 27);
+    --project-bg: rgb(27, 26, 26);
 
     --footer-bg: rgb(27, 25, 25);
     --email-bg: linear-gradient(to right, rgb(27, 25, 25), rgb(27, 27, 27));
@@ -474,14 +477,13 @@ footer{
         height: 125px;
         visibility: visible;
     }
-    body.active{
-        overflow-y: hidden;
-    }
     #back{
         position: fixed;
         display: block;
-        height: 100%;
+        height: 100vh;
+        min-height: -webkit-fill-available;
         width: 100%;
+        top: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.37);
         backdrop-filter: blur(20px) saturate(1);
@@ -490,7 +492,6 @@ footer{
     #back.active{
         visibility: visible;
         opacity: 1;
-        transition: opacity .4s;
     }
 }   
 @media(max-width: 550px){
