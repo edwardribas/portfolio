@@ -1,5 +1,4 @@
-// Website Menu
-
+// Menu consts
 const [burger, nav, back, body] = [
     document.querySelector('.burger'),
     document.querySelector('nav'),
@@ -8,10 +7,7 @@ const [burger, nav, back, body] = [
 ]
 
 // Nav, back, body toggler
-const change = () => {
-    [nav, back].forEach(e=>e.classList.toggle("active"));
-};
-
+const change = () => [nav, back].forEach(e=>e.classList.toggle("active"));
 
 // Calls change function when clicked.
 [burger, back].forEach(e=>e.onclick = change);
@@ -25,9 +21,7 @@ document.onkeydown = e => {
     }
 }
 
-
-// Theme Toggler
-
+// Theme consts
 const [toggler, moon, sun] = [
     document.querySelector("#nav-btn ul"),
     document.querySelector("#moon"),
