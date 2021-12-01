@@ -20,7 +20,7 @@ html{
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
-    width: 12px;
+    width: 10px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: rgb(94, 76, 199);
@@ -373,7 +373,7 @@ footer{
     display: block;
     opacity: 0;
     visibility: hidden;
-    font: 500 .6em 'Montserrat', sans-serif;
+    font: 500 .585em 'Montserrat', sans-serif;
     padding: 6px 8px;
     background-color: rgb(44, 44, 44);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.123);
@@ -381,6 +381,7 @@ footer{
     top: 55px;
     color: white;
     position: absolute;
+    pointer-events: none;
     left: 50%;
     transform: translateX(-50%) translateY(-5px);
     transition: .3s ease;

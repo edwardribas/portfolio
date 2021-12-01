@@ -109,7 +109,7 @@
 @media(max-width: 391px){
     #landing{
         width: 100%;
-        min-height: 700px;
+        min-height: 600px;
         margin: 0;
     }
     #landing h1{
