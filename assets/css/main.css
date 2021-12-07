@@ -21,7 +21,7 @@
     line-height: 1.3;
     text-align: center;
     color: var(--landing-title);
-    font-size: 3.5em;
+    font-size: calc(1.860rem + 1.5vw);
     margin: 0 auto;
 }
 #landing a{
@@ -114,7 +114,6 @@
     }
     #landing h1{
         word-wrap: break-word;
-        font-size: 2.5em;
     }
     #landing p{
         font-size: 1em

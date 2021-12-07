@@ -32,13 +32,13 @@ img{
 }
 
 #image{
-    clip-path: content-box;
     position: absolute;
     top: -65px;
     left: -65px;
     width: 80%;
     max-width: 200px;
     overflow: hidden;
+    -webkit-mask-image:-webkit-radial-gradient(white, black);
     border-radius: 50%;
     border: 10px solid var(--about-main-bg);
     transition: border .2s ease;

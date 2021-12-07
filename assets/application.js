@@ -30,16 +30,17 @@ const [toggler, moon, sun] = [
 
 const changeToLight = () => {sun.style.display = "none", moon.style.display = "block"};
 const changeToDark = () => {sun.style.display = "block", moon.style.display = "none"};
+const setItem = e => localStorage.setItem("default", e)
 
 // Keep theme setting in local storage
-if(localStorage.getItem("theme") == null){
-    localStorage.setItem("theme", "light");
+if(localStorage.getItem("default") == null){
+    setItem("light")
 }
-if(localStorage.getItem("theme") == "light"){
-    document.body.classList.remove("dark")
+if(localStorage.getItem("default") == "light"){
+    document.body.classList.remove("dark");
     changeToLight();
 }else{
-    document.body.classList.add("dark")
+    document.body.classList.add("dark");
     changeToDark();
 }
 
@@ -47,10 +48,10 @@ if(localStorage.getItem("theme") == "light"){
 toggler.onclick = () => {
     body.classList.toggle("dark");
     if(body.classList.contains("dark")){
-        localStorage.setItem("theme", "dark")
+        setItem("dark");
         changeToDark();
     }else{
-        localStorage.setItem("theme", "light")
+        setItem("light");
         changeToLight();
     }
 }

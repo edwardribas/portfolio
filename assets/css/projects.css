@@ -25,6 +25,7 @@ img{
     border-radius: 16px;
     box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.14);
     overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
     transition: box-shadow .5s, background-color .3s ease;
 }
 .project:hover{

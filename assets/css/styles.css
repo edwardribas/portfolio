@@ -33,12 +33,12 @@ html{
 body{
     overflow-x: hidden;
     background-color: var(--body-bg);
-    --body-bg: rgb(244, 244, 244);
-    --scroll-bg: rgb(244, 244, 244);
+    --body-bg: rgb(246, 246, 246);
+    --scroll-bg: rgb(246, 246, 246);
     --header-border: rgb(226, 226, 226);
     --nav-link: rgb(69, 69, 69);
     --nav-logo: rgb(94, 76, 199);
-    --nav-bg: rgb(244, 244, 244);
+    --nav-bg: rgb(246, 246, 246);
     --toggler-icon: rgb(34, 34, 34);
     --burger-icon: rgb(23, 23, 23);
     --m-nav-bg: rgb(244, 244, 244);
