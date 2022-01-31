@@ -46,6 +46,7 @@
 /* Section List */
 
 #landing ul{
+    user-select: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;

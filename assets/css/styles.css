@@ -12,6 +12,9 @@
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
+*::selection{
+    background-color: rgba(94, 122, 245, 0.192);
+}
 html,body{
     height: 100%;
 }
@@ -58,10 +61,11 @@ body{
 
     --project-title: rgb(0,0,0);
     --project-text:rgb(0,0,0);
+    --project-border: rgb(242, 242, 242);
     --project-bg: rgb(255, 255, 255);
 
     --footer-bg: rgb(231, 231, 231);
-    --email-bg: linear-gradient(to right, rgb(231, 231, 231), rgb(238, 238, 238));
+    --email-bg: rgb(238, 238, 238);
     --email-title: rgb(0,0,0);
     --email-link: rgb(0,0,0);
 
@@ -77,15 +81,15 @@ body{
 }
 .dark{
     background-color: var(--body-bg);
-    --body-bg: rgb(19, 18, 18);
+    --body-bg: rgb(17, 17, 17);
     --scroll-bg: rgb(19, 18, 18);
     --header-border: rgb(41, 38, 38);
     --nav-link: rgb(188, 188, 188);
     --nav-logo: rgb(195, 195, 195);
-    --nav-bg: rgb(19, 18, 18);
+    --nav-bg: rgb(17, 17, 17);
     --toggler-icon: rgb(222, 222, 222);
     --burger-icon: rgb(230, 230, 230);
-    --m-nav-bg: rgb(19, 18, 18);
+    --m-nav-bg: rgb(17, 17, 17);
 
     --landing-title: rgb(94, 76, 199);
     --landing-text: rgb(182, 182, 182);
@@ -95,17 +99,18 @@ body{
     --lists-texts: rgb(182, 182, 182);
     --lists-i-color: rgb(94, 76, 199);
     --lists-h-i-color: rgb(255,255,255);
-    --lists-i-bg: rgb(29, 27, 27);
+    --lists-i-bg: rgb(20, 20, 20);
 
-    --about-main-bg: rgb(25, 23, 23);
+    --about-main-bg: rgb(24, 24, 24);
     --about-main-text: rgb(183, 183, 183);
 
     --project-title: rgb(234, 234, 234);
     --project-text:rgb(234, 234, 234);
-    --project-bg: rgb(27, 26, 26);
+    --project-border: rgb(17, 17, 17);
+    --project-bg: rgb(24, 24, 24);
 
-    --footer-bg: rgb(27, 25, 25);
-    --email-bg: linear-gradient(to right, rgb(27, 25, 25), rgb(27, 27, 27));
+    --footer-bg: rgb(27, 27, 27);
+    --email-bg: rgb(27, 27, 27);
     --email-title: rgb(226, 226, 226);
     --email-link: rgb(223, 223, 223);
     
@@ -154,6 +159,7 @@ nav > ul{
     gap: 20px;
 }
 nav > ul a{
+    position: relative;
     color: var(--nav-link);
     font-size: 1em;
     font-weight: 600;
@@ -274,11 +280,13 @@ footer{
     font-family: 'Poppins', sans-serif;
     font-size: 1.4em;
     color: var(--email-title);
+    transition: color .2s ease;
 }
 #email a{
     display: inline;
     font-size: .9em;
-    color: var(--email-link)
+    color: var(--email-link);
+    transition: color .2s ease;
 }
 #email a::after{
     content: '';
@@ -313,8 +321,10 @@ footer{
     font-size: .8em;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: color .2s ease
 }
 #repositories a{
+    user-select: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,10 +341,13 @@ footer{
     transition: color .3s, background-color .3s;
 }
 #repositories i{
+    transform: translateY(.75px);
+    -webkit-transform: translateY(.75px);
+    -moz-transform: translateY(.75px);
     transition: transform .3s ease;
 }
 #repositories a:hover i{
-    transform: translateX(4px)
+    transform: translate(4px, 1px)
 }
 
 #social{
@@ -347,6 +360,7 @@ footer{
     text-transform: uppercase;
     margin-bottom: 20px;
     color: var(--social-title);
+    transition: color .2s ease;
 }
 #social ul{
     display: flex;
@@ -413,9 +427,36 @@ footer{
     gap: 5px;
     color: var(--info-text);
     text-align: center;
+    transition: border-top .2s ease;
 }
 #info p{
     font-size: .9em;
+    transition: color .2s ease;
+}
+#info a{
+    position: relative;
+    font-size: .85em;
+    font-weight: 500;
+    color: var(--info-text);
+    transition: color .2s ease;
+}
+#info a::after{
+    content: '';
+    display: block;
+    
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    height: 2px;
+    background-color:rgb(94, 76, 199) ;
+    width: 0;
+
+    transition: width .2s ease;
+}
+#info a:hover::after{
+    width: 80%;
 }
 #info b{
     font-weight: 900;
@@ -430,6 +471,26 @@ footer{
 }
 /* Media Queries */
 
+@media(min-width: 751px){
+    nav > ul a::after{
+        content: '';
+        display: block;
+        
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        height: 2px;
+        background-color:rgb(94, 76, 199) ;
+        width: 0;
+
+        transition: width .2s ease;
+    }
+    nav > ul a:hover::after{
+        width: 70%;
+    }
+}
 @media(max-width: 750px){
     .burger{
         display: inline;

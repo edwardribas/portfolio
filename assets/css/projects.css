@@ -23,13 +23,10 @@ img{
     max-width: 350px;
     background-color: var(--project-bg);
     border-radius: 16px;
-    box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.14);
+    border: 1px solid var(--project-border);
     overflow: hidden;
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
-    transition: box-shadow .5s, background-color .3s ease;
-}
-.project:hover{
-    box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.204);
+    -webkit-mask-image: -webkit-radial-gradient(white, black); /* temporário */
+    transition: box-shadow .5s, background-color .3s ease, border .2s;
 }
 .project:hover .p-image img{
     transform: scale(1.1);
@@ -37,6 +34,7 @@ img{
 .p-image{
     overflow: hidden;
     width: 100%;
+    border-radius: 16px 16px 0 0;
 }
 .p-image img{
     display: block;

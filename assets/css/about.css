@@ -55,12 +55,17 @@ img{
     transition: transform .3s;
 }
 #about{
+    font-family: 'Outfit', sans-serif;
     margin: 15px auto;
     font-size: .95rem;
+    font-weight: 300;
     color: var(--about-main-text);
+    transition: color .2s ease;
 }
 #location{
     display: block;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
     color:rgb(94, 76, 199);
     font-weight: 600;
     font-size: 17px;
