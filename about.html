@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-
+    <!-- Meta Settings -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Eduardo Ribas">
-    <meta property="og:title" content="Eduardo's Portfolio | About Me">
+    <meta property="og:title" content="Ribas | Sobre mim">
     <meta property="og:url" content="http://edwardribas.github.io">
     <meta property="og:image" content="https://i.imgur.com/bksOEqW.jpg">
-    <meta property="og:description" content="There's a little bit about me here.">
+    <meta property="og:description" content="Aqui tem um pouquinho sobre quem sou eu.">
     <meta name="theme-color" content="#5e4cc7">
 
-    <script src="https://kit.fontawesome.com/932eb47ff0.js" crossorigin="anonymous"></script>
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/about.css">
+    
+    <!-- Favicon and Font Awesome -->
     <link rel="shortcut icon" href="assets/imgs/favicon.png">
+    <script src="https://kit.fontawesome.com/932eb47ff0.js" crossorigin="anonymous"></script>
 
-    <title>Edward - Portfolio</title>
-
+    <title>Edward - Portfólio</title>
 </head>
 <body>
-
     <!-- Header -->
     <header>
         <nav>
             <a href="index.html" id="logo">Edward</a>
             
             <ul>
-                <li> <a href="index.html"> Home </a> </li>
-                <li> <a href="#" id="active"> About </a> </li>
-                <li> <a href="projects.html"> Projects </a> </li>
+                <li> <a href="index.html"> Início </a> </li>
+                <li> <a href="#" id="active"> Sobre </a> </li>
+                <li> <a href="projects.html"> Projetos </a> </li>
             </ul>
             
             <div id="nav-btn">
-                <a href="https://api.whatsapp.com/send?phone=5511972329897" target="_blank">contact</a>
+                <a href="https://api.whatsapp.com/send?phone=5511972329897" target="_blank">contato</a>
 
                 <ul>
                     <li id="moon"><i class="fa-solid fa-moon"></i></li>
@@ -49,19 +50,31 @@
 
     <!-- Main -->
     <div id="container">
-        <section id="main">
+        <!-- Info Card -->
+        <section id="card">
+            <!-- Image Container -->
             <div id="image">
                 <img src="assets/imgs/edward.png" alt="Author Image">
             </div>
+
+            <!-- Description -->
             <div id="desc">
-                <h1>Eduardo Ribas, 16</h1>
+                <!-- Title -->
+                <h1>Eduardo Ribas, 17</h1>
+                <!-- Text -->
                 <div id="about">
-                    <p>Web Development Student</p>
-                    <p>Student at ETEC Maria Cristina Medeiros</p>
+                    <p>Estudante de Desenvolvimento Web.</p>
+                    <p>Cursando Técnico em Informática para Internet.</p>
+                    <p>Atualmente no 2º ano do Ensino Médio.</p>
                 </div>
+                <!-- Location -->
                 <div id="location">
-                    <i class="fa-solid fa-location-dot"></i> <p>São Paulo, Brazil.</p>
+                    <i class="fa-solid fa-location-dot"></i> <p>São Paulo, Brasil.</p>
                 </div>
+            </div>
+
+            <div id="randomphrases">
+                <p id="random-container"></p>
             </div>
         </section>
         
@@ -71,43 +84,47 @@
                 <a href="mailto:ribasedu2005@gmail.com">ribasedu2005@gmail.com</a>
             </div>
             <div id="repositories">
-                <p>Want to see more projects?</p>
-                <a href="https://github.com/edwardribas?tab=repositories" target="_blank">Go <i class="fa-solid fa-arrow-right-long"></i></a>
+                <p>A fim de ver os meus repositórios?</p>
+                <a href="https://github.com/edwardribas?tab=repositories" target="_blank">ir <i class="fa-solid fa-arrow-right-long"></i></a>
             </div>
         </section>
     </div>
 
     <!-- Footer -->
-    <footer> 
+    <footer>
         <div id="branding">
             <div id="social">
-                <h3>Follow me on my social medias</h3>
+                <h3>redes que eu costumo frequentar</h3>
                 <ul>
                     <li><a href="https://github.com/edwardribas" target="_blank">
-                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-github" data-name="Github"></i>
                     </a></li>
                     <li><a href="https://twitter.com/edwardb_as" target="_blank">
-                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-twitter" data-name="Twitter"></i>
                     </a></li>
                     <li><a href="https://www.instagram.com/edwardb.as/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-instagram" data-name="Instagram"></i>
                     </a></li>
                     <li><a href="https://www.linkedin.com/in/edwardribas" target="_blank">
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-linkedin-in" data-name="LinkedIn"></i>
                     </a></li>
                 </ul>
             </div>
 
             <div id="info">
-                <p>2022 &copy; <b>Eduardo Ribas</b>.</p>
-                <p>Hope you liked it. Visit my Github.</p>
-                <a href="https://rodrigocarvalho.net/" target="_blank">Visit inspiration</a>
+                <h3>2022 &copy; <span>Eduardo Ribas</span>.</h3>
+                <p>Eu espero que você tenha curtido.</p>
+                <p>Site inspirado <a href="https://rodrigocarvalho.net/" target="_blank">neste</a> portfólio.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Active Menu Background -->
     <div id="back"></div>
-    <script src="assets/application.js"></script>
 
+    <!-- Application -->
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/theme_toggler.js"></script>
+    <script src="assets/js/random_phrases.js"></script>
 </body>
 </html>

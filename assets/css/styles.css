@@ -1,9 +1,9 @@
-/* Montserrat and Poppins */
+/* Montserrat and Outfit */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* General settings */
+
 *{
     margin: 0;
     padding: 0;
@@ -56,12 +56,12 @@ body{
     --lists-h-i-color: rgb(255,255,255);
     --lists-i-bg: rgb(255,255,255);
 
-    --about-main-bg: rgb(233, 233, 233);
-    --about-main-text: rgb(0,0,0);
+    --about-card-bg: rgb(233, 233, 233);
+    --about-card-text: rgb(0,0,0);
 
     --project-title: rgb(0,0,0);
     --project-text:rgb(0,0,0);
-    --project-border: rgb(242, 242, 242);
+    --project-border: rgb(235, 235, 235);
     --project-bg: rgb(255, 255, 255);
 
     --footer-bg: rgb(231, 231, 231);
@@ -76,13 +76,14 @@ body{
 
     --social-title: rgb(0,0,0);
     --info-border: rgb(214, 214, 214);
-    --info-text: rgb(17, 16, 16);
+    --info-text: rgb(16, 16, 16);
+    --info-text: rgb(14, 14, 14);
     --email-bg-mobile: rgb(231, 231, 231);
 }
 .dark{
     background-color: var(--body-bg);
     --body-bg: rgb(17, 17, 17);
-    --scroll-bg: rgb(19, 18, 18);
+    --scroll-bg: rgb(18, 18, 18);
     --header-border: rgb(41, 38, 38);
     --nav-link: rgb(188, 188, 188);
     --nav-logo: rgb(195, 195, 195);
@@ -101,8 +102,8 @@ body{
     --lists-h-i-color: rgb(255,255,255);
     --lists-i-bg: rgb(20, 20, 20);
 
-    --about-main-bg: rgb(24, 24, 24);
-    --about-main-text: rgb(183, 183, 183);
+    --about-card-bg: rgb(26, 26, 26);
+    --about-card-text: rgb(183, 183, 183);
 
     --project-title: rgb(234, 234, 234);
     --project-text:rgb(234, 234, 234);
@@ -111,123 +112,123 @@ body{
 
     --footer-bg: rgb(27, 27, 27);
     --email-bg: rgb(27, 27, 27);
-    --email-title: rgb(226, 226, 226);
-    --email-link: rgb(223, 223, 223);
+    --email-title: rgb(204, 204, 204);
+    --email-link: rgb(177, 177, 177);
+    --email-bg-mobile: rgb(25, 25, 25);
     
-    --repositories-bg: rgb(23, 22, 22);
+    --repositories-bg: rgb(24, 24, 24);
     --repositories-text: rgb(221, 221, 221);
     --r-btn-bg: transparent;
     --r-btn-color: rgb(94, 76, 199);
     
     --social-title: rgb(230, 230, 230);
-    --info-border: rgb(41, 38, 38);
+    --info-border: rgb(38, 38, 38);
     --info-text: rgb(178, 178, 178);
-    --email-bg-mobile: rgb(27, 25, 25);
+    --info-link: rgb(178, 178, 178);
 }
 nav,body,header, footer{
     transition: background .2s ease,
     border .2s ease;
 }
 
-/* Navbar */
-
+/* Header */
 header{
-    user-select: none;
-    -webkit-user-select: none;
     position: fixed;
     z-index: 1000;
+    width: 100%;
+
     background-color: var(--nav-bg);
     border-bottom: 1px solid var(--header-border);
-    width: 100%;
+    
+    user-select: none;
+    -webkit-user-select: none;
 }
-nav{
+
+/* Navbar */
+header nav{
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
     align-items: center;
-    height: 80px;
+
     width: 90%;
     max-width: 1200px;
+    height: 80px;
+    margin: 0 auto;
 }
-a#logo{
+
+/* Logo */
+header nav a#logo{
     font-weight: 800;
-    font-size: 2em;
+    font-size: 2rem;
     color: var(--nav-logo);
 }
-nav > ul{
+
+/* Links */
+header nav > ul{
     display: flex;
     gap: 20px;
 }
-nav > ul a{
+header nav > ul li a{
     position: relative;
-    color: var(--nav-link);
-    font-size: 1em;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     font-weight: 600;
-    display: flex;
+    
+    color: var(--nav-link);
     transition: color .3s ease;
 }
-nav > ul a:hover{
+header nav > ul li a#active{
     color: rgb(94, 76, 199);
 }
-nav > ul a#active{
-    color: rgb(94, 76, 199);
-}
-.n-icon{
-    display: none;
-}
-#nav-btn{
+
+/* Buttons */
+header nav #nav-btn{
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
 }
-#nav-btn a{
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+header nav #nav-btn > a{
+    display: inline;
     border-radius: 4px;
-    height: 38px;
-    width: 90px;
-    color:rgb(94, 76, 199);
+    padding: 6.5px 9.5px;
+    
+    font-weight: 700;
     border: 3px solid rgb(94, 76, 199);
+    color: rgb(94, 76, 199);
     transition: color .2s, background-color .2s;
 }
-#nav-btn a:hover{
-    background-color:rgb(94, 76, 199);
+header nav #nav-btn > a:hover{
+    background-color: rgb(94, 76, 199);
     color: var(--landing-h-btn-bg);
 }
-#nav-btn ul{
+header nav #nav-btn ul{
     display: flex;
     align-items: center;
     cursor: pointer;
     cursor: -webkit-pointer;
     transition: transform .2s ease;
 }
-#nav-btn ul:active, .burger:active{
+header nav #nav-btn ul:active, .burger:active{
     transform: scale(0.8);
 }
-#nav-btn ul i{
-    font-size: 25px;
+header nav #nav-btn ul i{
+    display: block;
+    font-size: 1.5rem;
     color: var(--toggler-icon);
 }
-.burger{
+header nav .burger{
     display: none;
-    cursor: pointer;
-    cursor: -webkit-pointer;
-    color: var(--burger-icon);
-    font-size: 25px;
-    transition: color .2s ease, transform .2s ease;
 }
 
-/* Container */
+/* Container and default animation */
 
 #container{
     margin: 0 auto;
     width: 90%;
     max-width: 1200px;
 }
-
 section {
     animation: fade-up .5s;
 }
@@ -243,7 +244,6 @@ section {
 }
 
 /* Footer */
-
 footer{
     display: block;
     width: 100%;
@@ -251,6 +251,7 @@ footer{
     background-color: var(--footer-bg);
 }
 
+/* Contact */
 #contact{
     display: flex;
     align-items: center;
@@ -259,12 +260,14 @@ footer{
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
-    width: 100%;
+    width: 90%;
     margin: 30px auto;
 }
 #email,#repositories{
     padding: 0 20px;
 }
+
+/* Contact - Email */
 #email{
     display: flex;
     flex-direction: column;
@@ -277,8 +280,9 @@ footer{
     transition: background .2s ease;
 }
 #email h2{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.4em;
+    font-weight: 800;
     color: var(--email-title);
     transition: color .2s ease;
 }
@@ -301,43 +305,52 @@ footer{
     width: 100%;
 }
 
+/* Contact - Repositories */
 #repositories{
-    flex-grow: 1;
     display: flex;
-    gap: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    flex-grow: 1;
+    gap: 10px;
     height: 120px;
+    
     background-color: var(--repositories-bg);
     transition: background-color .2s ease;
 }
 #repositories p{
-    display: block;
-    color: var(--repositories-text);
-    font-weight: 400;
     width: 90%;
     margin: 0 auto;
-    font-size: .8em;
-    text-transform: uppercase;
+    
+    font-weight: 400;
     letter-spacing: 1px;
+    font-size: .75em;
+    
+    text-transform: uppercase;
+    color: var(--repositories-text);
+    
     transition: color .2s ease
 }
 #repositories a{
-    user-select: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    width: 60px;
     height: 30px;
-    width: 70px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    border-radius: 5px;
+    
     font-size: .8em;
     font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: white;
+    
     background-color: rgb(94, 76, 199);
-    border-radius: 5px;
+    user-select: none;
+    -webkit-user-select: none;
     transition: color .3s, background-color .3s;
 }
 #repositories i{
@@ -350,12 +363,14 @@ footer{
     transform: translate(4px, 1px)
 }
 
+/* Social Network */
+
 #social{
     text-align: center;
     padding: 50px 10px;
 }
 #social h3{
-    font-size: .9em;
+    font-size: .85em;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -371,9 +386,8 @@ footer{
 }
 #social ul i{
     position: relative;
-    color: white;
-    display: block;
     font-size: 20px;
+    color: white;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.074);
     padding: 12px;
     border-radius: 12px;
@@ -384,6 +398,7 @@ footer{
     background-color: rgb(77, 61, 170)
 }
 #social ul i::after{
+    content: attr(data-name);
     display: block;
     opacity: 0;
     visibility: hidden;
@@ -400,24 +415,14 @@ footer{
     transform: translateX(-50%) translateY(-5px);
     transition: .3s ease;
 }
-#social ul li:nth-of-type(1) i::after{
-    content: 'Github';
-}
-#social ul li:nth-of-type(2) i::after{
-    content: 'Twitter';
-}
-#social ul li:nth-of-type(3) i::after{
-    content: 'Instagram';
-}
-#social ul li:nth-of-type(4) i::after{
-    content: 'LinkedIn';
-}
-
 #social ul i:hover::after{
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0)
 }
+
+/* Footer Text */
+
 #info{
     border-top: 1px solid var(--info-border);
     padding: 40px 10px;
@@ -429,46 +434,32 @@ footer{
     text-align: center;
     transition: border-top .2s ease;
 }
+#info h3{
+    font-family: 'Outfit', sans-serif;
+    font-size: .95rem;
+    font-weight: 300;
+    transition: color .2s ease;
+}
 #info p{
-    font-size: .9em;
+    font-size: .8rem;
     transition: color .2s ease;
 }
 #info a{
-    position: relative;
-    font-size: .85em;
-    font-weight: 500;
-    color: var(--info-text);
+    font-weight: 600;
+    color: var(--info-link);
     transition: color .2s ease;
 }
-#info a::after{
-    content: '';
-    display: block;
-    
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    height: 2px;
-    background-color:rgb(94, 76, 199) ;
-    width: 0;
+#info span{
+    font-weight: 800;
+    font-size: 1.05em;
+}
 
-    transition: width .2s ease;
-}
-#info a:hover::after{
-    width: 80%;
-}
-#info b{
-    font-weight: 900;
-    font-size: 1.1em;
-}
-#info p:nth-child(2){
-    font-size: .8em;
-}
+/* Active Menu Background */
 #back{
     visibility: hidden;
     opacity: 0;
 }
+
 /* Media Queries */
 
 @media(min-width: 751px){
@@ -485,59 +476,71 @@ footer{
         background-color:rgb(94, 76, 199) ;
         width: 0;
 
-        transition: width .2s ease;
+        transition: width .4s ease;
     }
     nav > ul a:hover::after{
-        width: 70%;
+        width: 100%;
     }
 }
 @media(max-width: 750px){
-    .burger{
-        display: inline;
-    }
     header{
         bottom: 0;
         border-bottom: none;
         border-top: 1px solid var(--header-border);
+    }
+    header nav #nav-btn .burger{
+        display: inline;
+        cursor: pointer;
+        cursor: -webkit-pointer;
+        color: var(--burger-icon);
+        font-size: 1.5rem;
+        transition: color .2s ease, transform .2s ease;
+    }
+    header nav > ul li a{
+        display: flex;
+        justify-content: center;
+        padding: 12px 15px;
+        font-size: .9em;
+    }
+    header nav > ul li a:hover{
+        color: rgb(94, 76, 199);
+    }
+    header nav > ul li:not(:last-of-type){
+        border-bottom: 1px solid var(--header-border);
+        transition: border .2s ease;
+    }
+    header nav > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 0;
+        
+        position: fixed;
+        bottom: 80px;
+        left: 0;
+        z-index: 1000;
+
+        width: 100%;
+        height: 0;
+        padding: 0 20px;
+        
+        border-bottom: 1px solid var(--header-border);
+        border-radius: 25px 25px 0 0;
+        background-color: var(--m-nav-bg);
+        
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: .4s ease;
+    }
+    header nav.active > ul{
+        height: 135px;
+        visibility: visible;
     }
     #container{
         padding: 0;
     }
     footer{
         padding-bottom: 80px;
-    }
-    nav > ul li a{
-        display: flex;
-        justify-content: center;
-        padding: 12px 15px;
-        font-size: .8em;
-    }
-    nav > ul li:not(:last-of-type){
-        border-bottom: 1px solid var(--header-border);
-        transition: border .2s ease;
-    }
-    nav > ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        width: 100%;
-        padding: 0 20px;
-        height: 0;
-        position: fixed;
-        bottom: 80px;
-        z-index: 1000;
-        gap: 0;
-        border-bottom: 1px solid var(--header-border);
-        left: 0;
-        background-color: var(--m-nav-bg);
-        visibility: hidden;
-        overflow-y: hidden;
-        border-radius: 25px 25px 0 0;
-        transition: .4s ease;
-    }
-    nav.active > ul{
-        height: 125px;
-        visibility: visible;
     }
     #back{
         position: fixed;
@@ -557,23 +560,22 @@ footer{
     }
 }   
 @media(max-width: 550px){
-    #nav-btn a{
+    header nav #nav-btn > a{
         display: none;
     }
 }
 @media(max-width: 300px){
-    a#logo{
+    header nav a#logo{
         display: none;
     }
-    nav{
+    header nav{
         justify-content: center;
     }
-    #nav-btn{
+    header nav #nav-btn{
         width: 100%;
         justify-content: space-between;
     }
     #email{
-        word-break: break-all;
         padding: 0 20px;
         font-size: 87%;
     }

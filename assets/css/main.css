@@ -1,78 +1,81 @@
-/* Section Texts */
+/* Page Settings */
 
+#container{
+    padding-top: 81px;
+}
 #landing{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    min-height: 600px;
+    padding:  120px 0;
+    display: block;
+    text-align: center;
     margin: 0 auto;
     width: 90%;
 }
-#landing p{
-    margin: 0 auto;
-    font-size: 1.2em;
-    color: var(--landing-text);
-    margin-bottom: 8px;
-}
+
+/* Texts */
+
 #landing h1{
     font-weight: 800;
-    line-height: 1.3;
-    text-align: center;
     color: var(--landing-title);
     font-size: calc(1.860rem + 1.5vw);
-    margin: 0 auto;
+    line-height: 1.35;
+}
+#landing p{
+    font-size: 1.2rem;
+    color: var(--landing-text);
 }
 #landing a{
-    user-select: none;
-    -webkit-user-select: none;
     display: inline-block;
-    background-color: rgb(94, 76, 199);
-    color: var(--landing-btn-color);
-    font-size: 1em;
-    font-weight: 500;
     padding: 10px 16px;
     border-radius: 8px;
-    border: 3px solid transparent;
-    transition: background-color .2s, color .2s, border .2s;
+
+    border: 3px solid rgb(94, 76, 199);
+    background-color: rgb(94, 76, 199);
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    color: var(--landing-btn-color);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color .2s, color .2s;
 }
 #landing a:hover{
     background-color: var(--lists-i-h-bg);
     color: rgb(94, 76, 199);
-    border: 3px solid rgb(94, 76, 199)
 }
 
-/* Section List */
+/* Icons */
 
 #landing ul{
-    user-select: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    width: 90%;
+    gap: 50px;
+    
     justify-content: center;
     text-align: center;
+
+    user-select: none;
+    -webkit-user-select: none;
     margin: 40px auto;
-    gap: 30px;
-}
-#landing ul li{
-    text-align: center;
 }
 #landing ul li i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 54px;
+    width: 54px;
+    border-radius: 21px;
+    font-size: 1.35rem;
     margin: 0 auto;
+
     user-select: none;
     -webkit-user-select: none;
     cursor: pointer;
     cursor: -webkit-pointer;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 54px;
-    width: 54px;
-    border-radius: 21px;
+    
     color: var(--lists-i-color);
     background-color: var(--lists-i-bg);
-    font-size: 23px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.123);
     transition: color .4s ease, background-color .2s ease, transform .2s;
 }
@@ -85,8 +88,9 @@
 }
 #landing ul li p{
     margin-top: 12px;
+    text-align: center;
     color: var(--lists-texts);
-    font-size: .8em;
+    font-size: .8rem;
 }
 #landing ul li p::after{
     content: '';
@@ -101,35 +105,26 @@
     width: 50%;
 }
 
+/* Media Queries */
+
 @media(max-width: 750px){
+    #container{
+        padding: 0;
+    }
     #landing{
-        padding-bottom: 80px;
-        min-height: 650px;
+        padding: 120px 0 100px;
     }
 }
-@media(max-width: 391px){
+@media(max-width: 375px){
     #landing{
-        width: 100%;
-        min-height: 600px;
-        margin: 0;
-    }
-    #landing h1{
-        word-wrap: break-word;
-    }
-    #landing p{
-        font-size: 1em
+        padding: 80px 0 60px;
     }
     #landing ul{
         gap: 30px;
-        max-width: 170px;
-        text-align: center;
     }
 }
-@media(max-width: 250px){
-    #landing{
-        min-height: 750px;
-    }
+@media(max-width: 305px) {
     #landing ul{
-        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
