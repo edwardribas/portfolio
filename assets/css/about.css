@@ -14,7 +14,7 @@
     max-width: 800px;
     border-radius: 30px;
     margin: 90px auto 130px;
-    padding: 0 10px;
+    padding: 0 20px;
 
     background-color: var(--about-card-bg);
     transition: background-color .2s ease;
@@ -47,7 +47,7 @@
     transition: transform .3s ease;
 }
 #card:hover #image img{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Description */
@@ -57,12 +57,12 @@
 }
 #desc h1{
     font-family: 'Outfit', sans-serif;
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: rgb(94, 76, 199);
 }
 #desc #about{
-    margin: 15px auto 20px;
+    margin: 20px auto 30px;
     line-height: 1.2;
 }
 #desc #about p{
@@ -76,7 +76,7 @@
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     color:rgb(94, 76, 199);
-    font-size: 17px;
+    font-size: 1.2rem;
 }
 #desc #location i{
     font-size: 1.5rem;
@@ -149,10 +149,11 @@
         transform: translateX(-50%);
     }
     #card:hover #image{
-        border: 6px solid rgb(94, 76, 199);
+        border: 7px solid rgb(94, 76, 199);
     }
     #card h1{
-        margin-top: 70px;
+        margin-top: 80px;
+        font-size: 2rem;
     }
     #desc #location{
         font-size: 1rem;
@@ -167,6 +168,12 @@
     }
 }
 @media(max-width: 405px){
+    #card #image{
+        max-width: 150px;
+    }
+    #card h1{
+        margin-top: 50px;
+    }
     #card{
         margin: 80px auto 120px;
     }

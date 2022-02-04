@@ -111,7 +111,7 @@
 
     visibility: hidden;
     opacity: 0;
-    transition: .2s ease;
+    transition: .3s ease;
 }
 .technologies .tech-item{
     background-color: rgb(94, 76, 199);
@@ -120,7 +120,7 @@
     border-radius: 8px;
     opacity: 0;
     transform: translateY(10px);
-    transition: .2s ease;
+    transition: .2s ease-in-out;
 }
 .technologies .tech-item span{
     font-family: 'Outfit', sans-serif;
@@ -136,13 +136,13 @@
     transform: translateY(-5px);
 }
 .project:hover .technologies .tech-item:nth-of-type(2){
-    transition-delay: .05s;
+    transition-delay: .03s;
 }
 .project:hover .technologies .tech-item:nth-of-type(3){
-    transition-delay: .08s;
+    transition-delay: .09s;
 }
 .project:hover .technologies .tech-item:nth-of-type(4){
-    transition-delay: .1s;
+    transition-delay: .12s;
 }
 
 /* Media Queries */

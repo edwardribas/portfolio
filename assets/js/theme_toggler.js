@@ -1,35 +1,18 @@
-/* Theme Toggler */
+// Variables
+const icon = document.querySelector("#toggler");
+const localTheme = localStorage.getItem('theme');
+const setItem = value => localStorage.setItem('theme', value);
 
-const [toggler, moon, sun] = [
-    document.querySelector("#nav-btn ul"),
-    document.querySelector("#moon"),
-    document.querySelector("#sun")
-]
+// Application
+const toggleClass = n => icon.classList = `fa-solid ${n}`;
 
-const changeToLight = () => {sun.style.display = "none", moon.style.display = "block"};
-const changeToDark = () => {sun.style.display = "block", moon.style.display = "none"};
-const setItem = e => localStorage.setItem("default", e)
-
-// Keep theme setting in local storage
-if(localStorage.getItem("default") == null){
-    setItem("light")
-}
-if(localStorage.getItem("default") == "light"){
-    document.body.classList.remove("dark");
-    changeToLight();
-}else{
-    document.body.classList.add("dark");
-    changeToDark();
+const changeTheme = bool => {
+    document.body.classList.toggle('dark', bool);
+    setItem(bool ? 'dark' : 'light');
+    toggleClass(bool ? 'fa-sun' : 'fa-moon')
 }
 
-// Alternate the theme
-toggler.onclick = () => {
-    body.classList.toggle("dark");
-    if(body.classList.contains("dark")){
-        setItem("dark");
-        changeToDark();
-    }else{
-        setItem("light");
-        changeToLight();
-    }
-}
+if (!localTheme || localTheme == 'light') changeTheme(0)
+else changeTheme(1);
+
+icon.onclick = () => changeTheme(!document.body.classList.contains("dark"));

@@ -40,13 +40,13 @@ body{
     --scroll-bg: rgb(246, 246, 246);
     --header-border: rgb(226, 226, 226);
     --nav-link: rgb(69, 69, 69);
-    --nav-logo: rgb(94, 76, 199);
+    --nav-logo: rgb(95, 77, 199);
     --nav-bg: rgb(246, 246, 246);
     --toggler-icon: rgb(34, 34, 34);
     --burger-icon: rgb(23, 23, 23);
     --m-nav-bg: rgb(244, 244, 244);
 
-    --landing-title: rgb(0, 0, 0);
+    --landing-title: rgb(65, 40, 202);
     --landing-text: rgb(1, 1, 1);
     --landing-btn-color: rgb(255,255,255);
     --landing-h-btn-bg: rgb(255,255,255);
@@ -102,7 +102,7 @@ body{
     --lists-h-i-color: rgb(255,255,255);
     --lists-i-bg: rgb(20, 20, 20);
 
-    --about-card-bg: rgb(26, 26, 26);
+    --about-card-bg: rgb(22, 22, 22);
     --about-card-text: rgb(183, 183, 183);
 
     --project-title: rgb(234, 234, 234);
@@ -161,6 +161,7 @@ header nav a#logo{
     font-weight: 800;
     font-size: 2rem;
     color: var(--nav-logo);
+    transition: color .2s ease;
 }
 
 /* Links */
@@ -203,22 +204,18 @@ header nav #nav-btn > a:hover{
     background-color: rgb(94, 76, 199);
     color: var(--landing-h-btn-bg);
 }
-header nav #nav-btn ul{
-    display: flex;
-    align-items: center;
+header nav #nav-btn i{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--toggler-icon);
     cursor: pointer;
     cursor: -webkit-pointer;
     transition: transform .2s ease;
 }
-header nav #nav-btn ul:active, .burger:active{
+header nav #nav-btn i:active, .burger:active{
     transform: scale(0.8);
 }
-header nav #nav-btn ul i{
-    display: block;
-    font-size: 1.5rem;
-    color: var(--toggler-icon);
-}
-header nav .burger{
+header nav #nav-btn .burger{
     display: none;
 }
 
@@ -260,7 +257,7 @@ footer{
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: 30px auto;
 }
 #email,#repositories{

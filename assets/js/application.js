@@ -1,23 +1,13 @@
 // Menu consts
-const [burger, nav, back, body] = [
-    document.querySelector('.burger'),
-    document.querySelector('nav'),
-    document.querySelector('#back'),
-    document.body
-]
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('nav');
+const back = document.querySelector('#back');
 
-// Nav, back, body toggler
+// Nav and back toggler
 const change = () => [nav, back].forEach(e=>e.classList.toggle("active"));
 
 // Calls change function when clicked.
-[burger, back].forEach(e=>e.onclick = change);
+burger.onclick = back.onclick = change;
 
 // Exit menu with ESC key
-document.onkeydown = e => {
-    if(e.code === "Escape"){
-        if(nav.classList.contains("active")){
-            change();
-        }
-    }
-}
-
+document.onkeydown = e => (e.key === "Escape" && nav.classList.contains("active")) && change();

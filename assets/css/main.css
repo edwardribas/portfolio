@@ -112,12 +112,12 @@
         padding: 0;
     }
     #landing{
-        padding: 120px 0 100px;
+        padding: 110px 0 100px;
     }
 }
 @media(max-width: 375px){
     #landing{
-        padding: 80px 0 60px;
+        padding: 100px 0 90px;
     }
     #landing ul{
         gap: 30px;
