@@ -10,4 +10,6 @@ const change = () => [nav, back].forEach(e=>e.classList.toggle("active"));
 burger.onclick = back.onclick = change;
 
 // Exit menu with ESC key
-document.onkeydown = e => (e.key === "Escape" && nav.classList.contains("active")) && change();
+document.onkeydown = e => {
+    if (e.key == 'Escape' && nav.classList.contains("active")) change();
+};

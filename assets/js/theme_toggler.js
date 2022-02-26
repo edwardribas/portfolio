@@ -1,9 +1,9 @@
 // Variables
 const icon = document.querySelector("#toggler");
 const localTheme = localStorage.getItem('theme');
-const setItem = value => localStorage.setItem('theme', value);
 
 // Application
+const setItem = value => localStorage.setItem('theme', value);
 const toggleClass = n => icon.classList = `fa-solid ${n}`;
 
 const changeTheme = bool => {
