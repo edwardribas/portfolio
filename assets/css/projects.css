@@ -6,7 +6,8 @@
 #projects{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    max-width: 1150px;
     align-items: flex-start;
     
     gap: 30px;
@@ -146,7 +147,16 @@
 }
 
 /* Media Queries */
-
+@media(max-width: 1288px){
+    #projects{
+        max-width: 800px;
+    }
+}
+@media(max-width: 856px){
+    #projects{
+        max-width: 380px;
+    }
+}
 @media(max-width: 750px){
     #container{
         padding: 0;
