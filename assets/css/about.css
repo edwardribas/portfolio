@@ -33,7 +33,8 @@
     border: 8px solid var(--about-card-bg);
 
     overflow: hidden;
-    -webkit-mask-image:-webkit-radial-gradient(white, black);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: -webkit-radial-gradient(white, black);
     transition: border .3s ease;
 }
 #card:hover #image{
@@ -42,8 +43,8 @@
 #card #image img{
     display: block;
     width: 100%;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     transition: transform .3s ease;
 }
 #card:hover #image img{
@@ -99,8 +100,8 @@
     
     opacity: 0;
     pointer-events: none;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     
     transition: .3s ease;
 }

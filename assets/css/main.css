@@ -31,13 +31,16 @@
     border: 3px solid rgb(94, 76, 199);
     background-color: rgb(94, 76, 199);
 
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
 
     color: var(--landing-btn-color);
     font-size: 1rem;
     font-weight: 500;
-    transition: background-color .2s, color .2s;
+    transition: background-color .2s, color .2s, transform .2s ease;
+}
+#landing a:active{
+    transform: scale(0.95);
 }
 #landing a:hover{
     background-color: var(--lists-i-h-bg);
@@ -54,8 +57,8 @@
     justify-content: center;
     text-align: center;
 
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     margin: 40px auto;
 }
 #landing ul li i{
@@ -69,14 +72,13 @@
     font-size: 1.35rem;
     margin: 0 auto;
 
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     cursor: pointer;
-    cursor: -webkit-pointer;
     
     color: var(--lists-i-color);
     background-color: var(--lists-i-bg);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.123);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.046);
     transition: color .4s ease, background-color .2s ease, transform .2s;
 }
 #landing ul li i:active{
