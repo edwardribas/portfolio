@@ -122,7 +122,7 @@ body{
     --r-btn-bg: transparent;
     --r-btn-color: rgb(94, 76, 199);
     
-    --social-title: rgb(230, 230, 230);
+    --social-title: rgb(216, 216, 216);
     --info-border: rgb(38, 38, 38);
     --info-text: rgb(178, 178, 178);
     --info-link: rgb(178, 178, 178);
@@ -173,9 +173,9 @@ header nav > ul{
 header nav > ul li a{
     position: relative;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     
     color: var(--nav-link);
     transition: color .3s ease;
@@ -363,12 +363,13 @@ footer{
 /* Social Network */
 
 #social{
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding: 50px 10px;
 }
 #social h3{
-    font-size: .85em;
-    font-weight: 700;
+    font-size: .82em;
+    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px;
     color: var(--social-title);
@@ -399,7 +400,7 @@ footer{
     display: block;
     opacity: 0;
     visibility: hidden;
-    font: 500 .585em 'Montserrat', sans-serif;
+    font: 500 .6em 'Outfit', sans-serif;
     padding: 6px 8px;
     background-color: rgb(44, 44, 44);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.123);
