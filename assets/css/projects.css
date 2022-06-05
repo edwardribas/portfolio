@@ -19,7 +19,7 @@
 
 .project{
     width: 350px;
-    border-radius: 16px;
+    border-radius: 13px;
 
     background-color: var(--project-bg);
     border: 1px solid var(--project-border);
@@ -55,7 +55,7 @@
     width: 90%;
     padding: 20px 0;
     margin: 0 auto;
-    line-height: 1.28;
+    line-height: 1.4;
 }
 .desc h3{
     color: var(--project-title);

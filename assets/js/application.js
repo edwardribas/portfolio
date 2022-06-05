@@ -1,10 +1,11 @@
 // Menu consts
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('nav');
-const back = document.querySelector('#back');
+const burger = document.querySelector('.burger'),
+      nav = document.querySelector('nav'),
+      back = document.querySelector('#back')
+;
 
 // Nav and back toggler
-const change = () => [nav, back].forEach(e=>e.classList.toggle("active"));
+const change = () => [nav, back].forEach(e => e.classList.toggle("active"));
 
 // Calls change function when clicked.
 burger.onclick = back.onclick = change;

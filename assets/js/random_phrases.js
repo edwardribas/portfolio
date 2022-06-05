@@ -10,7 +10,9 @@ const phrases = [
     'Comecei a me dedicar em Web Development em 2021.',
     'Ouço música a quase todo momento.',
     'Tive meu primeiro contato com HTML e CSS em 2018.',
-    'Trabalhar na área de tecnologia é meu principal objetivo.'
+    'Trabalhar na área de tecnologia é meu principal objetivo.',
+    'Em 25 de maio de 2022, tive minha primeira entrevista de emprego.',
+    '13 de junho de 2022 marca o meu primeiro estágio!' // especial
 ]
 
 // Random Generator
@@ -30,7 +32,7 @@ card.onmouseenter = () => {
             newphrase = phrases[randomNumber(0, phrases.length - 1)];
         }
     }
-    
+
     // Output
     randomContainer.innerHTML = newphrase;
     oldphrase = newphrase;

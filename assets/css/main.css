@@ -18,6 +18,7 @@
     color: var(--landing-title);
     font-size: calc(1.860rem + 1.5vw);
     line-height: 1.35;
+    margin-top: 10px;
 }
 #landing p{
     font-size: 1.2rem;
@@ -69,7 +70,7 @@
     height: 54px;
     width: 54px;
     border-radius: 21px;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     margin: 0 auto;
 
     -webkit-user-select: none;
@@ -92,7 +93,8 @@
     margin-top: 12px;
     text-align: center;
     color: var(--lists-texts);
-    font-size: .8rem;
+    font-size: .85rem;
+    font-weight: 200;
 }
 #landing ul li p::after{
     content: '';
