@@ -181,6 +181,7 @@ header nav > ul li a{
     transition: color .3s ease;
 }
 header nav > ul li a#active{
+    font-weight: 500;
     color: rgb(94, 76, 199);
 }
 
@@ -193,12 +194,12 @@ header nav #nav-btn{
 }
 header nav #nav-btn > a{
     display: inline;
-    border-radius: 6px;
-    border: 3px solid rgb(94, 76, 199);
+    border-radius: 10px;
+    font-weight: 600;
     font-family: 'Outfit', sans-serif;
-    padding: 6.5px 9.5px;
+    border: 3px solid rgb(94, 76, 199);
+    padding: 6.5px 10px;
     
-    font-weight: 700;
     color: rgb(94, 76, 199);
     transition: color .2s, background-color .2s;
 }
