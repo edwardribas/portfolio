@@ -1,0 +1,163 @@
+@import '../../assets/styles/theme.scss';
+
+#container{
+    padding-top: 81px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+
+    section{
+        animation: fade-up .4s ease;
+    }
+
+    #contact{
+        display: flex;
+        align-items: center;
+        background-color: $repositories-bg;
+        flex-wrap: wrap;
+        border-radius: 12px;
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+        margin: 30px auto;
+
+        #email, #repositories{
+            padding: 0 20px;
+        }
+
+        #email{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            gap: 8px;
+            height: 120px;
+            background: $email-bg;
+            transition: background .2s ease;
+
+            h2{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.4em;
+                font-weight: 800;
+                color: $email-title;
+                transition: color .2s ease;
+            }
+
+            a{
+                display: inline;
+                font-size: .9em;
+                color: $email-link;
+                transition: color .2s ease;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    margin: 7px auto 0;
+                    height: 2px;
+                    width: 0;
+                    background-color:rgb(94, 76, 199);
+                    transition: width .3s ease;
+                }
+
+                &:hover{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #repositories{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            flex-grow: 1;
+            gap: 10px;
+            height: 120px;
+            
+            background-color: $repositories-bg;
+            transition: background-color .2s ease;
+
+            p{
+                width: 90%;
+                margin: 0 auto;
+                
+                font-weight: 400;
+                letter-spacing: 1px;
+                font-size: .75em;
+                
+                text-transform: uppercase;
+                color: $repositories-text;
+                
+                transition: color .2s ease
+            }
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            
+                width: 60px;
+                height: 30px;
+                border-radius: 5px;
+                
+                font-size: .8em;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: white;
+                
+                background-color: rgb(94, 76, 199);
+                -webkit-user-select: none;
+                user-select: none;
+                transition: color .3s, background-color .3s;
+                
+                span{
+                    -webkit-transform: translateY(.75px);
+                    -moz-transform: translateY(.75px);
+                    transform: translateY(.75px);
+                    transition: transform .3s ease;
+                }
+    
+                &:hover{
+                    span{
+                        transform: translate(4px, 1px)
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes fade-up {
+    from{
+        opacity: 0;
+        transform: translateY(20px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@media(max-width: 750px){
+    #container{
+        padding: 0;
+    }
+}
+
+@media(max-width: 300px){
+    #container{
+        #contact{
+            #email{
+                padding: 0 20px;
+                font-size: 87%;
+            }
+        }
+    }
+}
