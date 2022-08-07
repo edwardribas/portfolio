@@ -1,4 +1,5 @@
-import { faBarsStaggered, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import { ThemeToggler } from '../ThemeToggler';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -6,21 +7,6 @@ import styles from './styles.module.scss';
 
 export default function Header(){
     const [headerState, setHeaderState] = useState(false);
-
-    // Theme toggler is pending //
-    // const icon = document.querySelector("#toggler");
-    // const localTheme = localStorage.getItem('theme');
-    // const setItem = value => localStorage.setItem('theme', value);
-    // const toggleClass = n => icon.classList = `fa-solid ${n}`;
-    // const changeTheme = bool => {
-    //     document.body.classList.toggle('dark', bool);
-    //     setItem(bool ? 'dark' : 'light');
-    //     toggleClass(bool ? 'fa-sun' : 'fa-moon')
-    // }
-    // if (!localTheme || localTheme == 'light') changeTheme(0)
-    // else changeTheme(1);
-    // icon.onclick = () => changeTheme(!document.body.classList.contains("dark"));
-
 
     return (<>
         <header>
@@ -55,7 +41,7 @@ export default function Header(){
                         </a>
                     
                     <span className={styles.toggler}>
-                        <FontAwesomeIcon icon={ faSun }/>
+                        <ThemeToggler/>
                     </span>
 
                     <span className={styles.burger} onClick={() => setHeaderState(!headerState)}>

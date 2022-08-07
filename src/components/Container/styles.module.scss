@@ -13,7 +13,7 @@
     #contact{
         display: flex;
         align-items: center;
-        background-color: $repositories-bg;
+        background-color: var(--repositories-bg);
         flex-wrap: wrap;
         border-radius: 12px;
         overflow: hidden;
@@ -33,21 +33,21 @@
             flex-grow: 1;
             gap: 8px;
             height: 120px;
-            background: $email-bg;
+            background: var(--email-bg);
             transition: background .2s ease;
 
             h2{
                 font-family: 'Montserrat', sans-serif;
                 font-size: 1.4em;
                 font-weight: 800;
-                color: $email-title;
+                color: var(--email-title);
                 transition: color .2s ease;
             }
 
             a{
                 display: inline;
                 font-size: .9em;
-                color: $email-link;
+                color: var(--email-link);
                 transition: color .2s ease;
 
                 &::after{
@@ -78,7 +78,7 @@
             gap: 10px;
             height: 120px;
             
-            background-color: $repositories-bg;
+            background-color: var(--repositories-bg);
             transition: background-color .2s ease;
 
             p{
@@ -90,7 +90,7 @@
                 font-size: .75em;
                 
                 text-transform: uppercase;
-                color: $repositories-text;
+                color: var(--repositories-text);
                 
                 transition: color .2s ease
             }

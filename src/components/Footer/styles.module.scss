@@ -5,7 +5,7 @@ footer{
     display: block;
     width: 100%;
     line-height: 1;
-    background-color: $footer-bg;
+    background-color: var(--footer-bg);
 }
 
 /* Social Network */
@@ -19,7 +19,7 @@ footer{
         font-weight: 600;
         text-transform: uppercase;
         margin-bottom: 20px;
-        color: $social-title;
+        color: var(--social-title);
         transition: color .2s ease;
     }
 
@@ -77,13 +77,13 @@ footer{
 
 /* Footer Text */
 #info{
-    border-top: 1px solid $info-border;
+    border-top: 1px solid var(--info-border);
     padding: 40px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    color: $info-text;
+    color: var(--info-text);
     text-align: center;
     transition: border-top .2s ease;
 
@@ -101,7 +101,7 @@ footer{
 
     a{
         font-weight: 600;
-        color: $info-link;
+        color: var(--info-link);
         transition: color .2s ease;
     }
 

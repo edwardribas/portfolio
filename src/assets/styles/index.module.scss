@@ -20,7 +20,7 @@ html,body{
 }
 body{
     overflow-x: hidden;
-    background-color: $body-bg;
+    background-color: var(--body-bg);
 }
 html{
     font: 16px 'Montserrat', sans-serif;
@@ -32,7 +32,7 @@ html{
 ::-webkit-scrollbar-thumb{
     background-color: rgb(94, 76, 199);
     border-radius: 10px;
-    border: 3.5px solid $scroll-bg;
+    border: 3.5px solid var(--scroll-bg);
 }
 nav, body, header, footer{
     transition: background-color .2s ease,

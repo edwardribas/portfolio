@@ -3,7 +3,8 @@ import ProjectItem from '../../components/ProjectItem';
 
 import {
     MyPortfolio, FrontsideBlog, FyloLandingPage,
-    TasksApp, PequenosTalentos
+    TasksApp, PequenosTalentos, SmartToys,
+    MyCalculator, BootstrapCV, RepoFinder
 } from '../../assets/imgs';
 
 import styles from './styles.module.scss';
@@ -52,6 +53,38 @@ export default function Projects(props){
                     repo="https://github.com/edwardribas/smalltalents"
                     preview="https://pequenostalentos.tecnologiaunica.com.br/"
                     technologies={['HTML', 'CSS', 'React']}
+                />
+                <ProjectItem
+                    image={SmartToys}
+                    name="SmartToys"
+                    description="Uma das primeiras landing pages que já fiz, feita para um projeto institucional."
+                    repo="https://github.com/edwardribas/smart-toys"
+                    preview="https://edwardribas.github.io/smart-toys"
+                    technologies={['HTML', 'CSS', 'JavaScript']}
+                />
+                <ProjectItem
+                    image={BootstrapCV}
+                    name="Bootstrap CV"
+                    description="Avaliação institucional, se trata de um portfólio simples feito utilizando o Bootstrap"
+                    repo="https://github.com/edwardribas/smart-toys"
+                    preview="https://edwardribas.github.io/smart-toys"
+                    technologies={['HTML', 'CSS', 'Bootstrap']}
+                />
+                <ProjectItem
+                    image={MyCalculator}
+                    name="Calculadora"
+                    description="Calculadora simples feita para praticar JavaScript."
+                    repo="https://github.com/edwardribas/calculator"
+                    preview="https://edwardribas.github.io/calculator/"
+                    technologies={['HTML', 'CSS', 'Bootstrap', 'JavaScript']}
+                />
+                <ProjectItem
+                    image={RepoFinder}
+                    name="Repo Finder"
+                    description="Aplicação assíncrona que consome a API do Github para retornar dados de usuários."
+                    repo="https://github.com/edwardribas/repo-finder"
+                    preview="https://edwardribas.github.io/repo-finder/"
+                    technologies={['HTML', 'CSS','JavaScript']}
                 />
             </section>
         </Container>

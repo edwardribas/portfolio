@@ -12,7 +12,7 @@
     border-radius: 30px;
     margin: 90px auto 130px;
     padding: 0 20px;
-    background-color: $about-card-bg;
+    background-color: var(--about-card-bg);
     transition: background-color .2s ease;
 
     #image{
@@ -23,7 +23,7 @@
         width: 80%;
         max-width: 200px;
         border-radius: 50%;
-        border: 8px solid $about-card-bg;
+        border: 8px solid var(--about-card-bg);
     
         overflow: hidden;
         -webkit-mask-image: -webkit-radial-gradient(white, black);
@@ -73,7 +73,7 @@
             font-family: 'Outfit', sans-serif;
             font-size: .95rem;
             font-weight: 200;
-            color: $about-card-text;
+            color: var(--about-card-text);
             transition: color .2s ease;
         }
     }

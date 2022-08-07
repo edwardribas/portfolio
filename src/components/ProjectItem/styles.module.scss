@@ -4,8 +4,8 @@
 .project{
     width: 350px;
     border-radius: 13px;
-    background-color: $project-bg;
-    border: 1px solid $project-border;
+    background-color: var(--project-bg);
+    border: 1px solid var(--project-border);
     overflow: hidden;
     -webkit-mask-image: -webkit-radial-gradient(white, black); /* temporário */
     mask-image:  -webkit-radial-gradient(white, black);
@@ -39,7 +39,7 @@
         line-height: 1.4;
         
         h3{
-            color: $project-title;
+            color: var(--project-title);
             font-size: .9rem;
             font-weight: 800;
             letter-spacing: 1px;
@@ -48,7 +48,7 @@
         }
         
         p{
-            color: $project-text;
+            color: var(--project-text);
             font-size: .8rem;
             letter-spacing: .25px;
             font-weight: 200;

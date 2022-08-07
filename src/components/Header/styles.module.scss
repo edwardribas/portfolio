@@ -4,8 +4,8 @@ header{
     position: fixed;
     z-index: 1000;
     width: 100%;
-    background-color: $nav-bg;
-    border-bottom: 1px solid $header-border;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--header-border);
     user-select: none;
 }
 nav{
@@ -20,7 +20,7 @@ nav{
     span#logo{
         font-weight: 800;
         font-size: 1.7rem;
-        color: $nav-logo;
+        color: var(--nav-logo);
         transition: color .2s ease;
     }
 
@@ -34,7 +34,7 @@ nav{
                 font-family: 'Outfit', sans-serif;
                 font-size: 1.05rem;
                 font-weight: 300;
-                color: $nav-link;
+                color: var(--nav-link);
                 transition: color .3s ease;
             }
         }
@@ -59,14 +59,14 @@ nav{
 
             &:hover{
                 background-color: rgb(94, 76, 199);
-                color: $landing-h-btn-bg;
+                color: var(--landing-h-btn-bg);
             }
         }
 
         span {
             display: block;
             font-size: 1.5rem;
-            color: $toggler-icon;
+            color: var(--toggler-icon);
             cursor: pointer;
             transition: transform .2s ease;
 
@@ -115,7 +115,7 @@ nav{
         bottom: 0;
         z-index: 1000;
         border-bottom: none;
-        border-top: 1px solid $header-border;
+        border-top: 1px solid var(--header-border);
     }
 
     nav {
@@ -131,9 +131,9 @@ nav{
             width: 100%;
             height: 0;
             padding: 0 20px;
-            border-bottom: 1px solid $header-border;
+            border-bottom: 1px solid var(--header-border);
             border-radius: 25px 25px 0 0;
-            background-color: $m-nav-bg;
+            background-color: var(--m-nav-bg);
             visibility: hidden;
             overflow-y: hidden;
             transition: .4s ease;
@@ -151,7 +151,7 @@ nav{
                     }
                 }
                 &:not(:last-of-type){
-                    border-bottom: 1px solid $header-border;
+                    border-bottom: 1px solid var(--header-border);
                     transition: border .2s ease;
                 }
             }
@@ -161,7 +161,7 @@ nav{
             .burger{
                 display: inline;
                 cursor: pointer;
-                color: $burger-icon;
+                color: var(--burger-icon);
                 font-size: 1.5rem;
                 transition: color .2s ease, transform .2s ease;
             }

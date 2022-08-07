@@ -7,6 +7,7 @@ export const MyPortfolio = require('./projects/personal_portfolio.png');
 export const PequenosTalentos = require('./projects/smalltalents.png');
 export const SmartToys = require('./projects/smarttoys.png');
 export const TasksApp = require('./projects/tasksapp.png');
+export const RepoFinder = require('./projects/repofinder.png');
 
 // Others
 export const Edward = require('./edward.png');
