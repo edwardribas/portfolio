@@ -1,0 +1,30 @@
+@import '../../assets/styles/theme.scss';
+
+#projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1150px;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 80px 20px;
+    margin: 0 auto;
+}
+
+/* Media Queries */
+@media(max-width: 1288px){
+    #projects{
+        max-width: 800px;
+    }
+}
+@media(max-width: 856px){
+    #projects{
+        max-width: 380px;
+    }
+}
+@media(max-width: 750px){
+    #projects{
+        padding: 50px 0;
+        width: 90%;
+    }
+}

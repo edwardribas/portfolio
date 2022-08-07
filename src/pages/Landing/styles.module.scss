@@ -1,0 +1,130 @@
+@import '../../assets/styles/theme.scss';
+
+#landing{
+    padding:  120px 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+
+    h1{
+        font-weight: 800;
+        color: $landing-title;
+        font-size: calc(1.860rem + 1.5vw);
+        line-height: 1.35;
+        margin-top: 10px;
+    }
+
+    p{
+        font-size: 1.2rem;
+        color: $landing-text;
+    }
+
+    a{
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 8px;
+    
+        border: 3px solid rgb(94, 76, 199);
+        background-color: rgb(94, 76, 199);
+    
+        -webkit-user-select: none;
+        user-select: none;
+    
+        color: $landing-btn-color;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: background-color .2s, color .2s, transform .2s ease;
+
+        &:active{
+            transform: scale(0.95);
+        }
+
+        &:hover{
+            background-color: $body-bg;
+            color: rgb(94, 76, 199);
+        }
+    }
+}
+#landing ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+    width: 90%;
+    gap: 50px;
+    margin: 40px auto;
+
+    li {
+        p{
+            margin-top: 12px;
+            text-align: center;
+            color: $lists-texts;
+            font-size: .85rem;
+            font-weight: 200;
+
+            &::after{
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                margin: 10px auto 0;
+                background-color: rgb(94, 76, 199);
+                transition: .3s ease;
+            }
+        }
+
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            height: 54px;
+            width: 54px;
+            border-radius: 21px;
+            font-size: 1.25rem;
+            margin: 0 auto;
+        
+            user-select: none;
+            cursor: pointer;
+            
+            color: $lists-i-color;
+            background-color: $lists-i-bg;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.079);
+            transition: color .4s ease, background-color .2s ease, transform .2s;
+        
+            &:active{
+                transform: scale(.9)
+            }
+        }
+
+        &:hover{
+            span{
+                color: $lists-h-i-color;
+                background-color: rgb(94, 76, 199);
+            }
+            p::after{
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media(max-width: 750px){
+    #landing{
+        padding: 110px 0 100px;
+    }
+}
+@media(max-width: 375px){
+    #landing{
+        padding: 100px 0 90px;
+    }
+    #landing ul{
+        gap: 30px;
+    }
+}
+@media(max-width: 305px) {
+    #landing ul{
+        gap: 10px;
+    }
+}
