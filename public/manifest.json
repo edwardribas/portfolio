@@ -1,0 +1,20 @@
+{
+    "name": "Edward | Portfólio",
+    "description": "Um pouco sobre quem sou eu e o que faço.",
+    "theme_color": "#F6F6F6",
+    "start_url": ".",
+    "background_color": "#F6F6F6",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./favicon.png",
+            "sizes": "250x250",
+            "type": "image/png"
+        },
+        {
+            "src": "./logo512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

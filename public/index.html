@@ -14,11 +14,22 @@
     <meta name="theme-color" content="#5e4cc7">
     
     <!-- Favicon and Font Awesome -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./favicon.png">
     <link rel="shortcut icon" href="./favicon.png">
     <title>Edward - Portfólio</title>
 </head>
 <body>
 	<noscript>Habilite o JavaScript para rodar essa aplicação.</noscript>
 	<div id="root"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.onload = () => {
+                navigator.serviceWorker.register('./serviceWorker.js')
+                    .then(reg => console.log("Service Worker registered!"))
+                    .catch(err => console.error(`Service Worker failed! (${err})`))
+            }
+        }
+    </script>
 </body>
 </html>
