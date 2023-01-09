@@ -19,7 +19,7 @@ export default function Landing(props){
                         <span>
                             <FontAwesomeIcon icon={faCalendar}/>
                         </span>
-                        <p>17 anos</p>
+                        <p>18 anos</p>
                     </li>
                     <li>
                         <span>

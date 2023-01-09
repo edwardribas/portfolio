@@ -35,7 +35,7 @@ export default function About(props){
 
                 {/* Description */}
                 <div id={styles.desc}>
-                    <h1>Eduardo Ribas, 17</h1>
+                    <h1>Eduardo Ribas, 18</h1>
                     <div id={styles.about}>
                         <p>Estudante de Desenvolvimento Web.</p>
                         <p>Cursando Técnico em Informática para Internet.</p>
