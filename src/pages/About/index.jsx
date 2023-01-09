@@ -4,6 +4,7 @@ import Container from '../../components/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { useRef } from 'react';
+import { getAge } from '../../utils/getAge';
 
 export default function About(props){
     document.title = props.title;
@@ -25,6 +26,8 @@ export default function About(props){
         phraseWrapper.current.innerText = phrases[index];
     }
 
+    const { age } = getAge();
+
     return (
         <Container>
             <section id={styles.card} onMouseEnter={() => getRandomPhrase(randomNumber())}>
@@ -35,11 +38,11 @@ export default function About(props){
 
                 {/* Description */}
                 <div id={styles.desc}>
-                    <h1>Eduardo Ribas, 18</h1>
+                    <h1>Eduardo Ribas, {age}</h1>
                     <div id={styles.about}>
-                        <p>Estudante de Desenvolvimento Web.</p>
+                        <p>Desenvolvedor Web.</p>
                         <p>Cursando Técnico em Informática para Internet.</p>
-                        <p>Atualmente no 2º ano do Ensino Médio.</p>
+                        <p>Atualmente no 3º ano do Ensino Médio.</p>
                     </div>
                     <div id={styles.location}>
                         <span><FontAwesomeIcon icon={faLocationDot}/></span>

@@ -67,12 +67,12 @@
 
     #about{
         margin: 20px auto 30px;
-        line-height: 1.2;
+        line-height: 1.3;
 
         p{
             font-family: 'Outfit', sans-serif;
-            font-size: .95rem;
-            font-weight: 200;
+            font-size: 1rem;
+            font-weight: 300;
             color: var(--about-card-text);
             transition: color .2s ease;
         }

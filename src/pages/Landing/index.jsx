@@ -3,9 +3,12 @@ import { faCalendar, faCode, faEarthAmerica } from '@fortawesome/free-solid-svg-
 import Curriculo from '../../assets/documents/Curriculo.pdf';
 import Container from '../../components/Container';
 import styles from './styles.module.scss';
+import { getAge } from '../../utils/getAge';
 
 export default function Landing(props){
     document.title = props.title;
+    const { age } = getAge();
+
     return (
         <Container>
             <section id={styles.landing}>
@@ -19,7 +22,7 @@ export default function Landing(props){
                         <span>
                             <FontAwesomeIcon icon={faCalendar}/>
                         </span>
-                        <p>18 anos</p>
+                        <p>{age} anos</p>
                     </li>
                     <li>
                         <span>
