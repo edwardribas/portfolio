@@ -25,7 +25,7 @@ export default function Footer() {
                 </div>
 
                 <div id={styles.info}>
-                    <h3>2022 &copy; <span>Eduardo Ribas</span>.</h3>
+                    <h3>{new Date().getFullYear()} &copy; <span>Eduardo Ribas</span>.</h3>
                     <p>Site inspirado <a href="https://rodrigocarvalho.net/" target="_blank" rel="noreferrer">neste</a> portfólio.</p>
                 </div>
             </div>

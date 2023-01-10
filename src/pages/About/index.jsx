@@ -6,8 +6,8 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { useRef } from 'react';
 import { getAge } from '../../utils/getAge';
 
-export default function About(props){
-    document.title = props.title;
+export default function About({ title }){
+    document.title = title;
     
     const phrases = [
         'Não costumo tomar muito café.',
@@ -17,16 +17,16 @@ export default function About(props){
         'Ouço música a quase todo momento.',
         'Tive meu primeiro contato com HTML e CSS em 2018.',
         'Em 25 de maio de 2022, tive minha primeira entrevista de emprego.',
-        '13 de junho de 2022 marca o início do meu primeiro estágio!'
+        '13 de junho de 2022 marca o início do meu primeiro estágio!',
+        'Alguns dos meus planos para 2023 são adquirir minha carta de habilitação e iniciar na academia.',
+        'Um dos grandes prazeres da minha vida é rir como se não houvesse amanhã.',
+        'Gosto da experiência de desenvolver projetos do zero.'
     ]
     
     const phraseWrapper = useRef();
-    const randomNumber = () =>  Math.floor(Math.random() * phrases.length);
-    const getRandomPhrase = index => {
-        phraseWrapper.current.innerText = phrases[index];
-    }
-
     const { age } = getAge();
+    const randomNumber = () =>  Math.floor(Math.random() * phrases.length);
+    const getRandomPhrase = index => phraseWrapper.current.innerText = phrases[index];
 
     return (
         <Container>

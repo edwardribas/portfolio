@@ -5,8 +5,8 @@ import Container from '../../components/Container';
 import styles from './styles.module.scss';
 import { getAge } from '../../utils/getAge';
 
-export default function Landing(props){
-    document.title = props.title;
+export default function Landing({ title }){
+    document.title = title;
     const { age } = getAge();
 
     return (

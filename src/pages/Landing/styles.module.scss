@@ -57,11 +57,12 @@
 
     li {
         p{
+            font-family: 'Outfit', sans-serif;
             margin-top: 12px;
             text-align: center;
             color: var(--lists-texts);
-            font-size: .85rem;
-            font-weight: 200;
+            font-size: .9rem;
+            font-weight: 300;
 
             &::after{
                 content: '';

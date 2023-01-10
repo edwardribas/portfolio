@@ -1,16 +1,15 @@
 import Container from '../../components/Container';
 import ProjectItem from '../../components/ProjectItem';
-
+import styles from './styles.module.scss';
 import {
     MyPortfolio, FrontsideBlog, FyloLandingPage,
     TasksApp, PequenosTalentos, SmartToys,
     MyCalculator, BootstrapCV, RepoFinder
 } from '../../assets/imgs';
 
-import styles from './styles.module.scss';
+export default function Projects({ title }){
+    document.title = title;
 
-export default function Projects(props){
-    document.title = props.title;
     return (
         <Container>
             <section id={styles.projects}>

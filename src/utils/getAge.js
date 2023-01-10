@@ -8,7 +8,5 @@ export const getAge = () => {
     if (currentMonth < 3 || (currentMonth === 3 && currentDay < 11))
         age--;
 
-    return {
-        age
-    }
+    return { age }
 }
