@@ -62,11 +62,12 @@
         display: block;
         width: 100%;
         overflow: hidden;
+        object-fit: contain;
+        max-height: 185px;
     
         img {
             display: block;
             width: 100%;
-            max-height: 185px;
             -webkit-user-select: none;
             user-select: none;
             transition: transform .3s ease;

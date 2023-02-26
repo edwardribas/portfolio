@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 import {
     MyPortfolio, FrontsideBlog, FyloLandingPage,
     TasksApp, PequenosTalentos, SmartToys,
-    MyCalculator, BootstrapCV, RepoFinder
+    MyCalculator, BootstrapCV, RepoFinder, BeHealthy
 } from '../../assets/imgs';
 
 export default function Projects({ title }){
@@ -14,12 +14,20 @@ export default function Projects({ title }){
         <Container>
             <section id={styles.projects}>
                 <ProjectItem
+                    image={BeHealthy}
+                    name="Behealthy"
+                    description="Aplicação intuitiva para ver treinos e alimentação organizadamente."
+                    repo="https://github.com/edwardribas/behealthy"
+                    preview="https://ribby-behealthy.netlify.app/"
+                    technologies={['React', 'SCSS', 'PWA']}
+                />
+                <ProjectItem
                     image={MyPortfolio}
                     name="Meu Portfólio"
                     description="O lugar pelo qual você pode ver e analisar alguns dos meus projetos."
                     repo="https://github.com/edwardribas/portfolio"
                     preview="https://edwardribas.netlify.app/"
-                    technologies={['HTML', 'SCSS', 'React']}
+                    technologies={['React', 'SCSS', 'PWA']}
                 />
                 <ProjectItem
                     image={FrontsideBlog}
@@ -35,7 +43,7 @@ export default function Projects({ title }){
                     description="Desafio do Frontend Mentor que consiste na construção de uma landing page."
                     repo="https://github.com/edwardribas/fylo-landing-page"
                     preview="https://ribas-fylopage.netlify.app/"
-                    technologies={['HTML', 'SCSS', 'React']}
+                    technologies={['React', 'SCSS']}
                 />
                 <ProjectItem
                     image={TasksApp}
@@ -51,7 +59,7 @@ export default function Projects({ title }){
                     description="Landing page feita para o projeto Pequenos Talentos da Tecnologia Única."
                     repo="https://github.com/edwardribas/smalltalents"
                     preview="https://pequenostalentos.tecnologiaunica.com.br/"
-                    technologies={['HTML', 'CSS', 'React']}
+                    technologies={['React', 'CSS']}
                 />
                 <ProjectItem
                     image={SmartToys}
