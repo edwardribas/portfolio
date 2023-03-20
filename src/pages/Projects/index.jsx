@@ -4,7 +4,8 @@ import styles from './styles.module.scss';
 import {
     MyPortfolio, FrontsideBlog, FyloLandingPage,
     TasksApp, PequenosTalentos, SmartToys,
-    MyCalculator, BootstrapCV, RepoFinder, BeHealthy
+    MyCalculator, BootstrapCV, RepoFinder, BeHealthy,
+    TabNews
 } from '../../assets/imgs';
 
 export default function Projects({ title }){
@@ -13,6 +14,14 @@ export default function Projects({ title }){
     return (
         <Container>
             <section id={styles.projects}>
+                <ProjectItem
+                    image={TabNews}
+                    name="TabNews"
+                    description="Reconceito de um fórum open-source feito pela comunidade para a comunidade."
+                    repo="https://github.com/edwardribas/tabnews-redesign"
+                    preview="https://tabnews-redesign.vercel.app"
+                    technologies={['NextJS 13', 'SCSS']}
+                />
                 <ProjectItem
                     image={BeHealthy}
                     name="Behealthy"

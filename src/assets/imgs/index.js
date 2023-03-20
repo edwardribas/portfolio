@@ -9,6 +9,7 @@ export const SmartToys = require('./projects/smarttoys.png');
 export const TasksApp = require('./projects/tasksapp.png');
 export const RepoFinder = require('./projects/repofinder.png');
 export const BeHealthy = require('./projects/behealthy.png');
+export const TabNews = require('./projects/tabnews.png');
 
 // Others
 export const Edward = require('./edward.png');
