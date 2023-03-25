@@ -3,11 +3,11 @@ import { Edward } from '../../assets/imgs';
 import Container from '../../components/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { getAge } from '../../utils/getAge';
 
 export default function About({ title }){
-    document.title = title;
+    useEffect(() => { document.title = title }, [title])
     
     const phrases = [
         'Não costumo tomar muito café.',

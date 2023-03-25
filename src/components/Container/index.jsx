@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '../Footer';
 import styles from './styles.module.scss';
 
-export default function Container(props) {
+export default function Container({children}) {
     return (<>
         <div id={styles.container}>
-            {props.children}
+            {children}
             
             <section id={styles.contact}>
                 <div id={styles.email}>

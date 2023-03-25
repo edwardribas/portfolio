@@ -3,10 +3,11 @@ import { faCalendar, faCode, faEarthAmerica } from '@fortawesome/free-solid-svg-
 import Curriculo from '../../assets/documents/Curriculo.pdf';
 import Container from '../../components/Container';
 import styles from './styles.module.scss';
+import { useEffect } from 'react';
 import { getAge } from '../../utils/getAge';
 
 export default function Landing({ title }){
-    document.title = title;
+    useEffect(() => { document.title = title }, [title])
     const { age } = getAge();
 
     return (
