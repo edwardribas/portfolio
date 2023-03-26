@@ -19,7 +19,7 @@ export const projects = [
         name: "Meu Portfólio",
         description: "O lugar pelo qual você pode ver e analisar alguns dos meus projetos.",
         repo: "https://github.com/edwardribas/portfolio",
-        preview: "ttps://edwardribas.netlify.app/",
+        preview: "https://edwardribas.netlify.app/",
         technologies: ['React', 'SCSS', 'PWA'],
     },
     {
