@@ -1,17 +1,29 @@
 import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { ThemeToggler } from '../ThemeToggler';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 export default function Header(){
     const [headerState, setHeaderState] = useState(false);
+    const [pageScrolled, setPageScrolled] = useState(false);
+    
+    useEffect(() => {
+        window.onscroll = () => window.scrollY > 20
+            ? setPageScrolled(true)
+            : setPageScrolled(false)
+    }, [])
 
     return (<>
-        <header>
+        <header style={{
+            borderColor: pageScrolled ? "var(--header-border)" : "transparent",
+            height: pageScrolled ? 80 : 90 
+        }}>
             <nav className={headerState ? styles.active : undefined}>
-                <span id={styles.logo}>Edward</span>
+                <span id={styles.logo}>
+                    Edward
+                </span>
 
                 <ul>
                     <li onClick={() => setHeaderState(false)}>

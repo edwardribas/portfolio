@@ -22,12 +22,6 @@
             .techItem{
                 opacity: 1;
                 transform: translateY(-5px);
-
-                &:nth-of-type(2){ transition-delay: .03s; }
-                &:nth-of-type(3){ transition-delay: .06s; }
-                &:nth-of-type(4){ transition-delay: .09s; }
-                &:nth-of-type(5){ transition-delay: .012s; }
-                &:nth-of-type(6){ transition-delay: .015s; }
             }
         }
     }

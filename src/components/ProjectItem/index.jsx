@@ -18,7 +18,11 @@ export default function ProjectItem({
                 {technologies && technologies.length > 0 &&
                     <div className={styles.technologies}>
                         {technologies.map((el, i) => (
-                            <div key={i} className={styles.techItem}>
+                            <div
+                                key={i}
+                                className={styles.techItem}
+                                style={{ transitionDelay: `${0.03*(i+1)}s` }}
+                            >
                                 <span>{el}</span>
                             </div>
                         ))}

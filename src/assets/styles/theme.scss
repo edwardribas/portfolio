@@ -1,7 +1,7 @@
 html {
     --body-bg: rgb(246, 246, 246);
     --scroll-bg: rgb(246, 246, 246);
-    --header-border: rgb(226, 226, 226);
+    --header-border: rgb(217, 217, 217);
     --nav-link: rgb(69, 69, 69);
     --nav-logo: rgb(95, 77, 199);
     --nav-bg: rgb(246, 246, 246);
@@ -37,15 +37,15 @@ html {
     --email-bg-mobile: rgb(231, 231, 231);
 
     &[theme=dark]{
-        --body-bg: rgb(17, 17, 17);
-        --scroll-bg: rgb(18, 18, 18);
-        --header-border: rgb(41, 38, 38);
-        --nav-link: rgb(188, 188, 188);
-        --nav-logo: rgb(195, 195, 195);
-        --nav-bg: rgb(17, 17, 17);
+        --body-bg: rgb(14, 14, 14);
+        --scroll-bg: rgb(14, 14, 14);
+        --header-border: rgb(25, 25, 25);
+        --nav-link: rgb(216, 216, 216);
+        --nav-logo: rgb(230, 230, 230);
+        --nav-bg: rgb(14, 14, 14);
         --toggler-icon: rgb(222, 222, 222);
         --burger-icon: rgb(230, 230, 230);
-        --m-nav-bg: rgb(17, 17, 17);
+        --m-nav-bg: rgb(14, 14, 14);
         --landing-title: rgb(94, 76, 199);
         --landing-text: rgb(182, 182, 182);
         --landing-btn-color: rgb(255,255,255);

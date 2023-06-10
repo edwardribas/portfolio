@@ -12,7 +12,6 @@ export default function Projects({ title }){
     const handleGetRepositories = async () => {
         const data = await fetch("https://api.github.com/users/edwardribas/repos").then(e => e.json());
         setRepositories(data.filter(proj => proj.topics.includes('to-portfolio')));
-        console.log(repositories)
     }
 
     useEffect(() => {

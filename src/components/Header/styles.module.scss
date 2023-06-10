@@ -7,6 +7,7 @@ header{
     background-color: var(--nav-bg);
     border-bottom: 1px solid var(--header-border);
     user-select: none;
+    transition: .2s ease;
 }
 nav{
     display: flex;
@@ -14,12 +15,16 @@ nav{
     align-items: center;
     width: 90%;
     max-width: 1200px;
-    height: 80px;
+    height: 100%;
     margin: 0 auto;
 
     span#logo{
+        display: flex;
+        gap: 0.5rem;
+        letter-spacing: -1px;
+        align-items: center;
         font-weight: 800;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         color: var(--nav-logo);
         transition: color .2s ease;
     }
