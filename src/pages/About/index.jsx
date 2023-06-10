@@ -7,8 +7,6 @@ import { useRef, useEffect } from 'react';
 import { getAge } from '../../utils/getAge';
 
 export default function About({ title }){
-    useEffect(() => { document.title = title }, [title])
-    
     const phrases = [
         'Não costumo tomar muito café.',
         'Sonho morar no Canadá.',
@@ -20,13 +18,18 @@ export default function About({ title }){
         '13 de junho de 2022 marca o início do meu primeiro estágio!',
         'Alguns dos meus planos para 2023 são adquirir minha carta de habilitação e iniciar na academia.',
         'Um dos grandes prazeres da minha vida é rir como se não houvesse amanhã.',
-        'Gosto da experiência de desenvolver projetos do zero.'
+        'Gosto da experiência de desenvolver projetos do zero.',
+        'Sou apaixonado em cantar, mesmo não fazendo com muita maestria.',
     ]
     
     const phraseWrapper = useRef();
     const { age } = getAge();
     const randomNumber = () =>  Math.floor(Math.random() * phrases.length);
     const getRandomPhrase = index => phraseWrapper.current.innerText = phrases[index];
+
+    useEffect(() => {
+        document.title = title
+    }, [title])
 
     return (
         <Container>

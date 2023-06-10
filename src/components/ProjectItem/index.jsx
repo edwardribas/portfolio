@@ -1,28 +1,43 @@
 import styles from './styles.module.scss';
 
-export default function ProjectItem(props) {
+export default function ProjectItem({
+    image,
+    technologies,
+    name,
+    description,
+    preview,
+    repo,
+}) {
+    const imageUrl = `https://i.imgur.com/${image}}`;
+
     return (
         <div className={styles.project}>
             <div className={styles.imageContainer}>
-                <img src={props.image} alt="Website"/>
+                <img src={imageUrl} alt="Website"/>
                 
-                {props.technologies &&
+                {technologies && technologies.length > 0 &&
                     <div className={styles.technologies}>
-                            {props.technologies.map((el, i) => (
-                                <div key={i} className={styles.techItem}>
-                                    <span>{el}</span>
-                                </div>
-                            ))}
+                        {technologies.map((el, i) => (
+                            <div key={i} className={styles.techItem}>
+                                <span>{el}</span>
+                            </div>
+                        ))}
                     </div>
                 }
             </div>
 
             <div className={styles.desc}>
-                <h3>{props.name}</h3>
-                <p>{props.description}</p>
+                {name && (
+                    <h3>{name}</h3>
+                )}
+
+                {description && (
+                    <p>{description}</p>
+                )}
+
                 <div className={styles.links}>
-                    {props.preview && <a href={props.preview} target="_blank" rel="noreferrer">Visitar</a>}
-                    {props.repo && <a href={props.repo} target="_blank" rel="noreferrer">Github</a>}
+                    {preview && <a href={preview} target="_blank" rel="noreferrer">Visitar</a>}
+                    {repo && <a href={repo} target="_blank" rel="noreferrer">Github</a>}
                 </div>
             </div>
     </div>

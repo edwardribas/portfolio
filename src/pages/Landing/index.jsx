@@ -6,10 +6,24 @@ import styles from './styles.module.scss';
 import { useEffect } from 'react';
 import { getAge } from '../../utils/getAge';
 
+export const ListItem = ({ icon, text }) => {
+    return (
+        <li>
+            <span>
+                <FontAwesomeIcon icon={icon}/>
+            </span>
+            <p>{text}</p>
+        </li> 
+    )
+}
+
 export default function Landing({ title }){
-    useEffect(() => { document.title = title }, [title])
     const { age } = getAge();
 
+    useEffect(() => {
+        document.title = title
+    }, [title])
+    
     return (
         <Container>
             <section id={styles.landing}>
@@ -19,24 +33,18 @@ export default function Landing({ title }){
 
                 {/* Icons */}
                 <ul>
-                    <li>
-                        <span>
-                            <FontAwesomeIcon icon={faCalendar}/>
-                        </span>
-                        <p>{age} anos</p>
-                    </li>
-                    <li>
-                        <span>
-                            <FontAwesomeIcon icon={faCode}/>
-                        </span>
-                        <p>Desenvolvimento Web</p>
-                    </li>
-                    <li>
-                        <span>
-                            <FontAwesomeIcon icon={faEarthAmerica}/>
-                        </span>
-                        <p>SP, Brasil</p>
-                    </li>
+                    <ListItem
+                        text={`${age} anos`}
+                        icon={faCalendar}
+                    />
+                    <ListItem
+                        text={'Desenvolvimento Web'}
+                        icon={faCode}
+                    />
+                    <ListItem
+                        text={'SP, Brasil'}
+                        icon={faEarthAmerica}
+                    />
                 </ul>
                 <a href={Curriculo} download="Eduardo Ribas.pdf">Download C.V</a>
             </section>
