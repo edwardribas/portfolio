@@ -1,4 +1,6 @@
 import styles from './styles.module.scss';
+import { useState } from 'react';
+import FallbackImage from '../../assets/imgs/indisponivel.png';
 
 export default function ProjectItem({
     image,
@@ -8,12 +10,17 @@ export default function ProjectItem({
     preview,
     repo,
 }) {
-    const imageUrl = `https://i.imgur.com/${image}}`;
+    const imageUrl = `https://i.imgur.com/${image}`;
+    const [imgSrc, setImgSrc] = useState(imageUrl);
 
     return (
         <div className={styles.project}>
             <div className={styles.imageContainer}>
-                <img src={imageUrl} alt="Website"/>
+                <img
+                    src={imgSrc ? imgSrc : FallbackImage}
+                    alt={name}
+                    onError={() => setImgSrc(FallbackImage)}
+                />
                 
                 {technologies && technologies.length > 0 &&
                     <div className={styles.technologies}>

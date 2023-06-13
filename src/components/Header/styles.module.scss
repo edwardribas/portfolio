@@ -4,10 +4,19 @@ header{
     position: fixed;
     z-index: 1000;
     width: 100%;
+    height: 90px;
     background-color: var(--nav-bg);
     border-bottom: 1px solid var(--header-border);
+    border-color: transparent;
     user-select: none;
     transition: .2s ease;
+    
+    @media (min-width: 751px) {
+        &.scrolled {
+            border-color: var(--header-border);
+            height: 80px
+        }
+    }
 }
 nav{
     display: flex;
@@ -147,7 +156,7 @@ nav{
                 a {
                     display: flex;
                     justify-content: center;
-                    padding: 14px 15px;
+                    padding: 18px 15px;
                     line-height: .95;
                     font-size: 1rem;
 
@@ -174,7 +183,7 @@ nav{
 
         &.active{
             > ul {
-                height: 135px;
+                height: 157px;
                 visibility: visible;
             }
         }

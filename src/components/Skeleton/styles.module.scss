@@ -1,11 +1,13 @@
+@import '../../assets/styles/theme.scss';
+
 .skeleton {
     display: block;
     width: 100%;
     height: 350px;
-    background-color: var(--project-bg);
     border-radius: 13px;
-    background: linear-gradient(-90deg, #111, #141414, #111, #141414);
+    background: var(--skeleton-bg);
 	background-size: 400% 100%;
+	transition: .2s ease;
 	animation: skeleton-gradiente 2.25s ease infinite;
 }
 

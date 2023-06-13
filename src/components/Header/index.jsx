@@ -16,10 +16,7 @@ export default function Header(){
     }, [])
 
     return (<>
-        <header style={{
-            borderColor: pageScrolled ? "var(--header-border)" : "transparent",
-            height: pageScrolled ? 80 : 90 
-        }}>
+        <header className={pageScrolled ? styles.scrolled : undefined}>
             <nav className={headerState ? styles.active : undefined}>
                 <span id={styles.logo}>
                     Edward
