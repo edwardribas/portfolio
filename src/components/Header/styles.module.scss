@@ -127,6 +127,7 @@ nav{
 @media(max-width: 750px){
     header{
         bottom: 0;
+        height: 80px;
         z-index: 1000;
         border-bottom: none;
         border-top: 1px solid var(--header-border);
