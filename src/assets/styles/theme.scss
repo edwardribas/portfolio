@@ -35,7 +35,7 @@ html {
     --info-text: rgb(16, 16, 16);
     --info-link: rgb(14, 14, 14);
     --email-bg-mobile: rgb(231, 231, 231);
-    --skeleton-bg: linear-gradient(-90deg, #fff, #f3f3f3, #fff, #f3f3f3);
+    --skeleton-bg: linear-gradient(-90deg, #e6e6e6, #f7f7f7, #e6e6e6, #f7f7f7);
 
     &[theme=dark]{
         --body-bg: rgb(14, 14, 14);
