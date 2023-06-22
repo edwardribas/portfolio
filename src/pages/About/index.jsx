@@ -16,10 +16,11 @@ export default function About({ title }){
         'Tive meu primeiro contato com HTML e CSS em 2018.',
         'Em 25 de maio de 2022, tive minha primeira entrevista de emprego.',
         '13 de junho de 2022 marca o início do meu primeiro estágio!',
-        'Alguns dos meus planos para 2023 são adquirir minha carta de habilitação e iniciar na academia.',
         'Um dos grandes prazeres da minha vida é rir como se não houvesse amanhã.',
         'Gosto da experiência de desenvolver projetos do zero.',
         'Sou apaixonado em cantar, mesmo não fazendo com muita maestria.',
+        'Fiz minha primeira contribuição para um repositório público em 22 de junho de 2023',
+        'Design minimalista é uma das minhas paixões',
     ]
     
     const phraseWrapper = useRef();
