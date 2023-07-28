@@ -22,10 +22,10 @@ root.render(
   <Router>    
     <Header/>
     <Routes>
-      <Route path='/' element={<Landing title="Edward | Início"/>}/>
-      <Route path='/about' element={<About title="Edward | Sobre"/>}/>
-      <Route path='/projects' element={<Projects title="Edward | Projetos"/>}/>
-      <Route path='/*' element={<NotFound title="Edward | 404"/>}/>
+      <Route path='/' element={<Landing title="Início · Ribas"/>}/>
+      <Route path='/about' element={<About title="Sobre · Ribas"/>}/>
+      <Route path='/projects' element={<Projects title="Projetos · Ribas"/>}/>
+      <Route path='/*' element={<NotFound title="404 · Ribas"/>}/>
     </Routes>
   </Router>
 );
