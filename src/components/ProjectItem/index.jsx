@@ -19,6 +19,8 @@ export default function ProjectItem({
                 <img
                     src={imgSrc ? imgSrc : FallbackImage}
                     alt={name}
+                    width={533}
+                    height={300}
                     onError={() => setImgSrc(FallbackImage)}
                 />
                 
