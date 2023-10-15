@@ -1,40 +1,43 @@
 /* Montserrat and Outfit */
-@import './theme.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "./theme.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* General settings */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    list-style: none;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
-*::selection{
-    background-color: rgba(94, 122, 245, 0.192);
+*::selection {
+  background-color: rgba(94, 122, 245, 0.192);
 }
-html,body{
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
-body{
-    overflow-x: hidden;
-    background-color: var(--body-bg);
+body {
+  overflow-x: hidden;
+  background-color: var(--body-bg);
 }
-html{
-    font: 16px 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
+html {
+  font: 16px "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
-::-webkit-scrollbar{
-    width: 10px;
+::-webkit-scrollbar {
+  width: 10px;
 }
-::-webkit-scrollbar-thumb{
-    background-color: rgb(94, 76, 199);
-    border-radius: 10px;
-    border: 3.5px solid var(--scroll-bg);
+::-webkit-scrollbar-thumb {
+  background-color: rgb(94, 76, 199);
+  border-radius: 10px;
+  border: 3.5px solid var(--scroll-bg);
 }
-nav, body, header, footer{
-    transition: background-color .2s ease,
-    border .2s ease;
+nav,
+body,
+header,
+footer {
+  transition: background-color 0.2s ease, border 0.2s ease;
 }

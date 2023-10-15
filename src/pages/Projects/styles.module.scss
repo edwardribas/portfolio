@@ -1,69 +1,71 @@
-@import '../../assets/styles/theme.scss';
+@import "../../assets/styles/theme.scss";
 
-#projects{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    max-width: 1110px;
-    gap: 30px;
-    padding: 40px 0;
-    margin: 0 auto;
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  max-width: 1110px;
+  gap: 30px;
+  padding: 40px 0;
+  margin: 0 auto;
 }
 
 .search_box {
-    position: relative;
-    height: 45px;
-    user-select: none;
-    max-width: 1110px;
-    margin: 30px auto 0;
-    
-    span {
-        position: absolute;
-        background-color: rgb(65, 40, 202);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: rgb(240, 240, 240);
-        width: 45px;
-        border-radius: 35px;
-        height: 100%;
-    }
-    
-    input {
-        font-size: .98rem;
-        font-family: 'Outfit', sans-serif;
-        font-weight: 300;
-        height: 100%;
-        display: block;
-        border-radius: 35px;
-        width: 100%;
-        padding: 12px 24px 12px 60px;
-        border: none;
-        color: var(--nav-link);
-        border: 1px solid var(--header-border);
-        background-color: var(--project-bg);
-        outline: none;
-        transition: border .2s ease, color .2s ease, background-color .2s ease;
-    }
+  position: relative;
+  height: 45px;
+  user-select: none;
+  max-width: 1110px;
+  margin: 30px auto 0;
+
+  span {
+    position: absolute;
+    background-color: rgb(65, 40, 202);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(240, 240, 240);
+    width: 45px;
+    border-radius: 35px;
+    height: 100%;
+  }
+
+  input {
+    font-size: 0.98rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    height: 100%;
+    display: block;
+    border-radius: 35px;
+    width: 100%;
+    padding: 12px 24px 12px 60px;
+    border: none;
+    color: var(--nav-link);
+    border: 1px solid var(--header-border);
+    background-color: var(--project-bg);
+    outline: none;
+    transition: border 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  }
 }
 
 .not_found_paragraph {
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    color: var(--repositories-text);
-    transition: color .2s ease;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  color: var(--repositories-text);
+  transition: color 0.2s ease;
 }
 
 /* Media Queries */
-@media(max-width: 1288px){
-    .search_box, #projects {
-        max-width: 900px;
-    }
+@media (max-width: 1288px) {
+  .search_box,
+  #projects {
+    max-width: 900px;
+  }
 }
 
-@media(max-width: 840px){
-    .search_box, #projects {
-        max-width: 500px;
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 840px) {
+  .search_box,
+  #projects {
+    max-width: 500px;
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,9 +1,5 @@
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export const SkeletonCard = () => {
-    return (
-        <div className={styles.skeleton}>
-
-        </div>
-    )
-}
+  return <div className={styles.skeleton}></div>;
+};
